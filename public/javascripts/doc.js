@@ -109,12 +109,22 @@ contentItem.modelServiceContainer.render = function(){
     });
 }
 
+
 //渲染dataServiceContainer部分的内容
 contentItem.dataServiceContainer.render = function(){
-    this.dom.html("<h1 class='caption'>Sorry, this page is under development.</h1>");
-    this.show();
-};
-
+    var _this = this;
+    $.ajax({
+        "type": "get",
+        "url": BASE_URL + "doc_file/dataServiceContainer/dataServiceContainer.ejs",
+        "success": function(res){
+            _this.dom.html(res);
+            _this.show();
+        },
+        "error": function(xhr, status, error){
+            _this.renderErr(xhr, status, error);
+        }
+    });
+}
 //渲染API部分的内容
 contentItem.api.render = function(fullTitle, file, ext){
     var _this = this;
@@ -239,41 +249,13 @@ function parseExtFile(stream){
 }
 
 //渲染examples部分的内容
-contentItem.examples.render = function(){
+// contentItem.examples.render = function(){
 
-}
+// }
 
-//渲染serviceContainer部分的内容
-contentItem.serviceContainer.render = function(){
-    var _this = this;
-    $.ajax({
-        "type": "get",
-        "url": BASE_URL + "doc_file/serviceContainer/serviceContainer.ejs",
-        "success": function(res){
-            _this.dom.html(res);
-            _this.show();
-        },
-        "error": function(xhr, status, error){
-            _this.renderErr(xhr, status, error);
-        }
-    });
-}
+ 
 
-//渲染dataServiceContainer部分的内容
-contentItem.dataServiceContainer.render = function(){
-    var _this = this;
-    $.ajax({
-        "type": "get",
-        "url": BASE_URL + "doc_file/dataServiceContainer/dataServiceContainer.ejs",
-        "success": function(res){
-            _this.dom.html(res);
-            _this.show();
-        },
-        "error": function(xhr, status, error){
-            _this.renderErr(xhr, status, error);
-        }
-    });
-}
+
 
 //渲染quickStart部分的内容
 contentItem.quickStart.render = function(){
