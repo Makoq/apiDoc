@@ -172,47 +172,33 @@
         }
     ],
     "Data Service Api": [
+       
         {
-            "typeName": "Basic",
-            "fullTypeName": "Model Description Language(MDL)",
-            "subTypes": [
-                {
-                    "typeName": "instruction",
-                    "file": "dataService/basic/instruction.ejs"
-                },
-                {
-                    "typeName": "framework",
-                    "file": "dataService/basic/framework.ejs"
-                     
-                }
-            ]
-        },
-        {
-            "typeName": "Api",
+             
             "fullTypeName": "Api",
             "subTypes": [
                 {
-                    "typeName": "basic",
+                    "typeName": "Common",
                     "file": "dataService/api/basic.json",
                     "ext": "dataService/api/basic.ext"
                 },
                 {
-                    "typeName": "file Service",
+                    "typeName": "File Service",
                     "file": "dataService/api/fileService.json",
                     "ext": "dataService/api/fileService.ext"
                 },
              
-
                 {
-                    "typeName": "information Service",
+                    "typeName": "Information Service",
                     "file": "dataService/api/informationService.json",
                     "ext": "dataService/api/informationService.ext"
                 },
                 {
-                    "typeName": "visualization Service",
+                    "typeName": "Visualization Service",
                     "file": "dataService/api/visualizationService.json",
                     "ext": "dataService/api/visualizationService.ext"
                 }
+                 
             ]
         }
     ],

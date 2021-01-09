@@ -2,7 +2,7 @@
     
     {
         
-        
+
         "Name" : "Upload file",
         "URL":"/data",
         "Method":"POST",
@@ -150,6 +150,30 @@
         "ReturnType" : "JSON",
         "Request":"batch_delete_req",
         "Response":"batch_delete_rsp"
+    }
+    ,
+    {
+        "Name" : "Get File In Node",
+        "URL":"/fileObtain",
+        "Method":"GET",
+        "Headers":"content-type:application/json",
+        "Description" : "Get File In Node",
+        "Return" : "JSON",
+        "Params" : [
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node."
+            },
+            {
+                "Name" : "id",
+                "Type" : "String",
+                "Description" : "The id of data."
+            }
+        ],
+        "ReturnType" : "JSON",
+        "Request":"get_file_in_node_req",
+        "Response":"get_file_in_node_rsp"
     }
 
 

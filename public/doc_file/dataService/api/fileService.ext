@@ -73,3 +73,18 @@
     "code" : [code], // [code] shows 1 which means successful request, -1 means err
     "message" : "[msg]" // message for error or other notice in request
 }
+
+
+!!get_file_in_node_req
+{
+    token:[token], // [token] means the unique identifier of the specific service node 
+    id:[id] //[id] means the specific data in node
+}
+
+!!get_file_in_node_rsp
+{
+    "code": [code], // [code] shows 0 which means successful request, -1 means err
+    "result": {
+        "uid": [uid] // [uid] means download url for the service result
+    }
+}

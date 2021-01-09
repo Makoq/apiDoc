@@ -3,6 +3,8 @@ var contentItem = {
     "api" : new ContentItem("#js-api"),
     "examples" : new ContentItem("#js-examples"),
     "serviceContainer": new ContentItem("#js-serviceContainer"),
+    "dataServiceContainer": new ContentItem("#js-dataServiceContainer"),
+
     "quickStart" : new ContentItem("#js-quickStart")
 };
 var timer = null;
@@ -220,6 +222,22 @@ contentItem.serviceContainer.render = function(){
     $.ajax({
         "type": "get",
         "url": BASE_URL + "doc_file/serviceContainer/serviceContainer.ejs",
+        "success": function(res){
+            _this.dom.html(res);
+            _this.show();
+        },
+        "error": function(xhr, status, error){
+            _this.renderErr(xhr, status, error);
+        }
+    });
+}
+
+//渲染dataServiceContainer部分的内容
+contentItem.dataServiceContainer.render = function(){
+    var _this = this;
+    $.ajax({
+        "type": "get",
+        "url": BASE_URL + "doc_file/dataServiceContainer/dataServiceContainer.ejs",
         "success": function(res){
             _this.dom.html(res);
             _this.show();

@@ -49,3 +49,46 @@
         ]
     }
 }
+
+!!capability_of_service_req
+
+{
+    id:[id], //service id 
+    type:[type],// [type] means service type, including Processing, Visualziation, Data
+    token:// [token] means the unique identifier of the specific service node 
+}
+
+
+!!capability_of_service_rsp
+
+{
+      "code": [code]// [code] shows 0 which means has such data, -1 means err
+    "capability": {
+        "msg": "capability",
+        "data": {
+            // metadata description
+        }
+
+    }
+}
+
+!!test_data_urls_req
+{
+    id:[id] //service id 
+    token: [token] // [token] means the unique identifier of the specific service node 
+
+
+}
+
+!!test_data_urls_rsp
+{
+    code: [code],// [code] shows 0 which means has such data, -1 means err
+    id:[
+        // Multiple urls of test data of the service
+         {
+            "file_name": [file_name] //file name  
+            "url":  [url ]//download url of test data
+        },
+        
+    ]
+}
