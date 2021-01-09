@@ -1,0 +1,75 @@
+!!upload_req
+
+{
+    "datatag" : "[datatag]", // tag of uploading data
+    "datafile" : "[datafile]" // uploading file
+}
+!!upload_rsp
+
+{
+    "result" : "[result]", // [result] can be 'suc', 'err'
+    "code" : [code], // [code] shows 1 which means successful request, -1 means err
+    "data" : {
+        "id" : "[dataid]", // [dataid] is the id that indating data storage in the server
+    },
+    "message" : "[msg]" // message for error or other notice in request
+}
+
+
+!!check_md5_req
+{
+    md5:[md5] //[md5] is the md5 of the file
+}
+!!check_md5_rsp
+
+{
+    "result" : "[result]", // [result] can be 'suc', 'err'
+    "code" : [code], // [code] shows 1 which means has such data, -1 means err, 0 means no such data
+    "data" : {
+        "id" : "[dataid]", // [dataid] is the id that indating data storage in the server
+    },
+    "message" : "[msg]" // message for error or other notice in request
+}
+
+
+!!delete_rsp
+
+{
+   "result" : "[result]", // [result] can be 'suc', 'err'
+    "code" : [code], // [code] shows 1 which means successful request, -1 means err
+    "data" : "",
+    "message" : "[msg]" // message for error or other notice in request
+}
+
+!!preview_rsp
+
+{
+     .png File
+}
+
+!!metadata_rsp
+{
+    "result" : "[result]", // [result] can be 'suc', 'err'
+    "code" : [code], // [code] shows 1 which means successful request, -1 means err
+    "data" : {
+        "datatag" : "[datatag]" // [datatag]
+    },
+    "message" : "[msg]" // message for error or other notice in request
+}
+
+!!batch_download_req{
+    "oids" : "[oids]", // oid string
+}
+ 
+
+!!batch_delete_req
+{
+    "oids" : "[oids]", // oid string
+}
+
+!!batch_delete_rsp
+{
+     "result" : "[result]", // [result] can be 'suc', 'err'
+    "code" : [code], // [code] shows 1 which means successful request, -1 means err
+    "message" : "[msg]" // message for error or other notice in request
+}

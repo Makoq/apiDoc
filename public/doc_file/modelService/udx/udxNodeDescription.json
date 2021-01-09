@@ -1,0 +1,174 @@
+[{
+        "Name" : "SchemaNodeType2String(ESchemaNodeType pType)",
+        "Description" : "schema node type to string",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "ESchemaNodeType",
+                "Description" : "ESchema Node Type"
+            }
+        ],
+        "Return" : "Converted String",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "String2SchemaNodeType(string pType)",
+        "Description" : "string to schema node type",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "string",
+                "Description" : "Node Type of String"
+            }
+        ],
+        "Return" : "ESchema Node Type",
+        "ReturnType" : "ESchemaNodeType"
+    },
+	{
+        "Name" : "ESchemaNodeType getKernelType()",
+        "Description" : "Get kernel type value",
+        "Params" : [
+        ],
+        "Return" : "ESchema Node Type",
+        "ReturnType" : "ESchemaNodeType"
+    },
+	{
+        "Name" : "modifyKernelType(ESchemaNodeType pKernelType)",
+        "Description" : "modify kernel type value",
+		"Params" : [
+            {
+                "Name" : "pKernelType",
+                "Type" : "ESchemaNodeType",
+                "Description" : "ESchema Node Type"
+            }
+        ],
+        "Return" : "Edit results of ESchema Node Type",
+        "ReturnType" : "ESchemaNodeType"
+    },
+	{
+        "Name" : "getNodeDescription()",
+        "Description" : "get node description",
+        "Params" : [
+        ],
+        "Return" : "Node description",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifyNodeDescription(string pNodeInfo)",
+        "Description" : "modify node description",
+		"Params" : [
+            {
+                "Name" : "pNodeInfo",
+                "Type" : "string",
+                "Description" : "node description"
+            }
+        ],
+        "Return" : "Is the edited successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getConceptTag()",
+        "Description" : "get concept tag value",
+        "Params" : [
+        ],
+        "Return" : "concept tag value",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifyConceptTag(string pTag)",
+        "Description" : "Tags to be edited",
+		"Params" : [
+            {
+                "Name" : "pTag",
+                "Type" : "string",
+                "Description" : "unit tag value"
+            }
+        ],
+        "Return" : "Is the edited successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getUnitTag()",
+        "Description" : "get unit tag value",
+        "Params" : [
+        ],
+        "Return" : "unit tag value",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifyUnitTag(string pTag)",
+        "Description" : "modify unit tag value",
+		"Params" : [
+            {
+                "Name" : "pTag",
+                "Type" : "string",
+                "Description" : "unit tag value"
+            }
+        ],
+        "Return" : "Unit tag value",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "getDimensionTag()",
+        "Description" : "get dimension tag value",
+        "Params" : [
+        ],
+        "Return" : "dimension tag value",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifyDimensionTag(string pTag)",
+        "Description" : "modify dimension tag value",
+		"Params" : [
+            {
+                "Name" : "pTag",
+                "Type" : "string",
+                "Description" : "dimension tag value"
+            }
+        ],
+        "Return" : "Is the edited successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getSpatialReferencefTag()",
+        "Description" : "get spatial reference tag",
+        "Params" : [
+        ],
+        "Return" : "spatial reference tag",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifySpatialReferenceTag(string pTag)",
+        "Description" : "modify spatial reference tag",
+		"Params" : [
+            {
+                "Name" : "pTag",
+                "Type" : "string",
+                "Description" : "spatial reference tag value"
+            }
+        ],
+        "Return" : "Is the edited successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getDataTemplateTag()",
+        "Description" : "get data template tag",
+        "Params" : [
+        ],
+        "Return" : "data template tag",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "modifyDataTemplateTag(string pTag)",
+        "Description" : "modify data template tag",
+		"Params" : [
+            {
+                "Name" : "pTag",
+                "Type" : "string",
+                "Description" : "data template tag"
+            }
+        ],
+        "Return" : "Is the edited successful",
+        "ReturnType" : "bool"
+    }
+	]

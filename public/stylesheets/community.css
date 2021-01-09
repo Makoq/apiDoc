@@ -1,0 +1,13 @@
+.develop{
+    position:relative;
+    background:url('../images/background.png') no-repeat center;
+    background-size:400px;
+}
+.develop > p{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, 150px);
+    font-size:24px;
+    font-weight:100;
+}

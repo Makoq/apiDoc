@@ -1,0 +1,57 @@
+[
+    {
+        "Name" : "Check Online Service Nodes",
+        "URL":"/onlineNodes",
+        "Method":"GET",
+        "Description" : "Check online service nodes, which can provide available web service",
+        "Params" : [
+        ],
+        "Return" : "Online service nodes information",
+        "ReturnType" : "JSON",
+         
+        "Response":"online_service_rsp"
+    },
+    
+    {
+        "Name" : "Check Service Node State",
+        "URL":"/state",
+        "Method":"GET",
+        "Headers":"Content-type:application/json",
+        "Description" : "Check service node state, which is online or offline",
+        "Params" : [
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            }
+        ],
+        "Return" : "Check specific service node state including online and offline state.",
+        "ReturnType" : "JSON",
+        "Request":"chekc_service_state_req",
+        "Response":"chekc_service_state_rsp"
+    },
+    {
+        "Name" : "Check Available Services Of Node",
+        "URL":"/onlineNodesAllPcs",
+        "Method":"GET",
+        "Headers":"Content-type:application/json",
+        "Description" : "Check service node state, which is online or offline",
+        "Params" : [
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "type",
+                "Type" : "String",
+                "Description" : "The service type of one specific service node, including information, visualization and data service, optional parameter: Processing, Visualization and Data"
+            }
+        ],
+        "Return" : "Check specific service node state including online and offline state.",
+        "ReturnType" : "JSON",
+        "Request":"chekc_available_service_req",
+        "Response":"chekc_available_service_rsp"
+    }
+
+]

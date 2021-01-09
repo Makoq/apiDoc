@@ -1,0 +1,38 @@
+[{
+        "Name" : "AddConcept(ConceptClass item)",
+        "Description" : "Add Concept",
+		"Params" : [
+            {
+                "Name" : "item",
+                "Type" : "ConceptClass",
+                "Description" : "Concept class value"
+            }
+        ]
+    },
+	{
+        "Name" : "RemoveConcept(string m_id)",
+        "Description" : "Remove Concept",
+		"Params" : [
+            {
+                "Name" : "m_id",
+                "Type" : "string",
+                "Description" : "Concept id"
+            }
+        ],
+        "Return" : "Is the remove successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "ReturnConcept(string m_id)",
+        "Description" : "get concept item",
+		"Params" : [
+            {
+                "Name" : "m_id",
+                "Type" : "string",
+                "Description" : "Concept id"
+            }
+        ],
+        "Return" : "concept item",
+        "ReturnType" : "ConceptClass"
+    }
+	]

@@ -1,0 +1,151 @@
+[
+    {
+        "Name" : "Invoke Service, Data Maintain In Node",
+        "URL":"/extPcs",
+        "Method":"GET",
+        "Headers":"content-type:application/json",
+        "Description" : "Invoke service in distributed node, input data maintain in service node",
+        "Params" : [
+            {
+                "Name" : "dataId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of test data in one specific service node"
+            },
+            {
+                "Name" : "params",
+                "Type" : "String",
+                "Description" : "(optional) The possible params of specific service"
+            },
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "reqUsrOid",
+                "Type" : "String",
+                "Description" : "(optional) The user information of interface invoking"
+            },
+            {
+                "Name" : "pcsId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service"
+            },
+            {
+                "Name" : "name",
+                "Type" : "String",
+                "Description" : "(optional)The name of one specific services"
+            }
+        ],
+        "Return" : "Service invoke result",
+        "ReturnType" : "JSON",
+        "Request":"invoke_data_in_node_req",
+        "Response":"invoke_data_in_node_rsp"
+    },
+    {
+        "Name" : "Invoke Service, Data Maintain In OpenGMS DataContainer",
+        "URL":"/invokeDistributedPcs",
+        "Method":"GET",
+        "Headers":"content-type:application/json",
+        "Description" : "Invoke service in distributed node, input data maintain in OpenGMS DataContainer",
+        "Params" : [
+            
+            {
+                "Name" : "params",
+                "Type" : "String",
+                "Description" : "(optional) The possible params of specific service"
+            },
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "contDtId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of input data from OpenGMS Data Container, which is instroduced in fileService"
+            },
+            {
+                "Name" : "pcsId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service"
+            }
+            
+        ],
+        "Return" : "Service invoke result",
+        "ReturnType" : "JSON",
+        "Request":"invoke_data_in_dc_id_req",
+        "Response":"invoke_data_in_dc_id_rsp"
+    },
+    {
+        "Name" : "Invoke Service, Data URL FROM MODEL OUT",
+        "URL":"/invokeUrlDataPcs",
+        "Method":"POST",
+        "Headers":"content-type:application/x-www-form-urlencoded",
+        "Description" : "Invoke service in distributed node, input data from data urls",
+        "Params" : [
+            
+            {
+                "Name" : "params",
+                "Type" : "String",
+                "Description" : "(optional) The possible params of specific service"
+            },
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "url",
+                "Type" : "String",
+                "Description" : "The url of input data, which is mainly support OpenGMS model service execution result"
+            },
+            {
+                "Name" : "pcsId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service"
+            }
+            
+        ],
+        "Return" : "Service invoke result",
+        "ReturnType" : "JSON",
+        "Request":"invoke_data_url_req",
+        "Response":"invoke_data_url_rsp"
+    },
+    {
+        "Name" : "Invoke Service, Data URLs FROM OpenGMS DataContainer",
+        "URL":"/invokeUrlsDataPcs",
+        "Method":"POST",
+        "Headers":"content-type:application/x-www-form-urlencoded",
+        "Description" : "Invoke service in distributed node, input data from data urls",
+        "Params" : [
+            
+            {
+                "Name" : "params",
+                "Type" : "String",
+                "Description" : "(optional) The possible params of specific service"
+            },
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "urls",
+                "Type" : "String",
+                "Description" : "The urls of input data, which are from OpenGMS DataContainer,and multiple urlsjonined by ','"
+            },
+            {
+                "Name" : "pcsId",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service"
+            }
+            
+        ],
+        "Return" : "Service invoke result",
+        "ReturnType" : "JSON",
+        "Request":"invoke_data_urls_req",
+        "Response":"invoke_data_urls_rsp"
+    }
+
+]

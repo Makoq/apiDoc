@@ -1,0 +1,93 @@
+[    
+    {
+        "Name" : "getName()",
+        "Description" : "Get UdxNode name (UdxNode name)",
+        "Params" : [
+        ],
+        "Return" : "UdxNode name",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "createKernel()",
+        "Description" : "create kernel(UdxKernel)",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "string",
+                "Description" : "creat a kernel of a certain type"
+            }
+        ]
+    },
+    {
+        "Name" : "getKernel()",
+        "Description" : "Get kernel(UdxKernel)",
+        "Params" : [
+        ],
+        "Return" : "The UdxKernel of UdxNode",
+        "ReturnType" : "UdxKernel"
+    },
+    {
+        "Name" : "getChildNodeCount()",
+        "Description" : "Get the number of child node",
+        "Params" : [
+        ],
+        "Return" : "The numbers of child node",
+        "ReturnType" : "int"
+    },
+    {
+        "Name" : "getChildNode(int idx)",
+        "Description" : "Get the specified child node",
+		"Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "position"
+            }
+        ],
+        "Return" : "The child node",
+        "ReturnType" : "UdxNode"
+    },
+	{
+        "Name" : "addChildNode(String pName, EKernelType pType)",
+        "Description" : "Add child node",
+		"Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "String",
+                "Description" : "child node name"
+            },{
+                "Name" : "pType",
+                "Type" : "EKernelType",
+                "Description" : "child node type"
+            }
+        ],
+        "Return" : "The child node",
+        "ReturnType" : "UdxNode"
+    },
+	{
+        "Name" : "removeChildNode(UdxNode pNode)",
+        "Description" : "Remove child nodes based on node",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNode",
+                "Description" : "child node"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeChildNode(UdxNode pNode)",
+        "Description" : "Remove child nodes based on location",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNode",
+                "Description" : "child node"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    }
+]

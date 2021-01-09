@@ -1,0 +1,145 @@
+<h1 class="caption">Service Container</h1>
+<div class="markdown">
+    <h2 class="markdown-title">Definition</h2>
+    <p>
+        Service container is a lightweight software which publish geo-analysis models to services in the web environment 
+        and manage them. It can be downloaded in the portal site of the OpenGMS. In the package, there is a console that 
+        can start the container.
+    </p>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Components Introduction</h2>
+    <p>
+        The service container of geo-analysis models consist of three components, including service container console,
+        service container and database. Service container is the most important component of the system.
+        Database is make up by MongoDB and it is used to store the information of model services,
+        records and data. Service container console is a tool to start database and service container.
+    </p>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Service Container Console</h2>
+    <p>
+        As is shown in Figure 1, the console has the functions of starting and stopping Database and Service Container,
+        including Database management and Service Container management. Before start Service Container,
+        user must start Database.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/1.jpg" alt="model service container" />
+        <figcaption>Fig. 1 Service Container Console</figcaption>
+    </figure>
+    <p>
+        As is shown in Figure 2, there are four functions in Opera of menu. On the first one button Firewall Setting, 
+        administrator could set firewall indoor rule to let service users to access services in service container. 
+        The second, Service List, and third, Management Page are to open service list page and management page. 
+        The Exit is to close this application.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/2.jpg" alt="Operations in Service Container" />
+        <figcaption>Fig. 2 Operations in Service Container</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Management Page</h2>
+    <h2 class="markdown-title">Homepage</h2>
+    <p>
+        As is shown in Figure 3, Service Container consists of four components, including Local Services, Notice,
+        Data Cache and Settings.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/3.jpg" alt="Homepage of Service Container" />
+        <figcaption>Fig. 3 Homepage of Service Container</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Services List</h2>
+    <p>
+        As is shown in Figure 4, model users can get local model services in the list of model services on local machine.
+        In the list, you can get all of the local model services and change the status of the model service,
+        such as online or not. The users can invoke, delete and register the model services in this page (the deleting model
+        service must be offline). After model service registered, it will become an available computing model on the portal,
+        as shown in Figure 5. Click Details to see the details of the model, as shown in Figure 6.
+        Click Invoking to access data preparation page and ready to invoke model service, as shown in Figure 7.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/4.jpg" alt="Model Service List" />
+        <figcaption>Fig. 4 Model Service List</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/5.jpg" alt="Registered Model Service in Portalt" />
+        <figcaption>Fig. 5 Registered Model Service in Portal</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/6.jpg" alt="Details of Model Service" />
+        <figcaption>Fig. 6 Details of Model Service</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/7.jpg" alt="Invoking of Model Service" />
+        <figcaption>Fig. 7 Invoking of Model Service</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Services List</h2>
+    <p>
+        As is shown in Figure 8, user get the list of model services which is running. The user can pause,
+        kill the running instances or get the detail of running records.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/8.jpg" alt="Model Instance List" />
+        <figcaption>Fig. 8 Model Instance List</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Invoking Records</h2>
+    <p>
+        As is shown in Figure 9, user get statistic information about invoking. Figure 10 shows the list of invoking records. 
+        By clicking detail, user could get more detail about the record, as shown in Figure 11.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/9.jpg" alt="Model Records Statistic" />
+        <figcaption>Fig. 9 Model Records Statistic</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/10.jpg" alt="Model Records List" />
+        <figcaption>Fig. 10 Model Records List</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/11.jpg" alt="Model Record Detail" />
+        <figcaption>Fig. 11 Model Record Detail</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Service Deployment</h2>
+    <p>
+        As is shown in Figure 12, user can deploy model services by uploading model service packages.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/12.jpg" alt="Model Deployment" />
+        <figcaption>Fig. 12 Model Deployment</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Notice Page</h2>
+    <p>
+        As is shown in Figure 13, the notice page is the list of all notice about service starting, stopping and deleted.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/13.jpg" alt="Notice Page" />
+        <figcaption>Fig. 13 Notice Page</figcaption>
+    </figure>
+</div>
+<div class="markdown">
+    <h2 class="markdown-title">Setting Page</h2>
+    <p>
+        As shown in Figure 14 and 15, in the setting page, users can get status and information of the local machine,
+        such as CPU usage, database settings and local port settings. In addition, users can register model service container
+        on the portal, and make it as a member of the computing resource on the portal.
+    </p>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/14.jpg" alt="Status in Setting Page" />
+        <figcaption>Fig. 14 Status in Setting Page</figcaption>
+    </figure>
+    <figure class="pictureBox">
+        <img src="./images/serviceContainer/15.jpg" alt="Information in Setting Page" />
+        <figcaption>Fig. 15 Information in Setting Page</figcaption>
+    </figure>
+</div>

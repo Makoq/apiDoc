@@ -1,0 +1,21 @@
+[
+    {
+        "Name" : "ReturnLocalization(LocalizationEnum lenum)",
+        "Description" : "Return Localization",
+        "Params" : [
+            {
+                "Name" : "lenum",
+                "Type" : "LocalizationEnum",
+                "Description" : "Localization value"
+            }
+        ],
+        "Return" : "Return to concept category",
+        "ReturnType" : "LocalizationClass",
+        "Img":{ 
+                "path": "./images/",
+                "width":"200px",
+                "height":"200px"
+            }
+    }
+
+]

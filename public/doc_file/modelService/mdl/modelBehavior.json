@@ -1,0 +1,423 @@
+[
+	{
+        "Name" : "loadFromXml(XmlElement pModelClassElement)",
+        "Description" : "Load Behavior from XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Behavior in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool",
+        "Example": "loadFromXml"
+    },
+	{
+        "Name" : "formatToXml(XmlElement pModelClassElement)",
+        "Description" : "Format Behavior to XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Behavior in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addModelDatasetItem(ref ModelDatasetItem pDataset)",
+        "Description" : "Add the model dataset item",
+        "Params" : [
+            {
+                "Name" : "pDataset",
+                "Type" : "ModelDatasetItem",
+                "Description" : "the Dataset to add"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelDatasetItem(ref ModelDatasetItem pDataset)",
+        "Description" : "Remove the model dataset item",
+        "Params" : [
+            {
+                "Name" : "pDataset",
+                "Type" : "ModelDatasetItem",
+                "Description" : "the Dataset to remove"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelDatasetItemCount()",
+        "Description" : "Get the count of dataset items",
+        "Params" : [],
+        "Return" : "the count of dataset items",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getModelDatasetItem(int idx, ref ModelDatasetItem pDataset)",
+        "Description" : "Get the model dataset item",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of dataset item"
+            },
+            {
+                "Name" : "pDataset",
+                "Type" : "ModelDatasetItem",
+                "Description" : "the return of dataset item"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelDatasetItem(string pName, ref ModelDatasetItem pDataset)",
+        "Description" : "Get the model dataset item",
+        "Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "string",
+                "Description" : "the name of dataset item"
+            },
+            {
+                "Name" : "pDataset",
+                "Type" : "ModelDatasetItem",
+                "Description" : "the return of dataset item"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateModelDatasetItem(int idx, ref ModelDatasetItem pDataset)",
+        "Description" : "Update the model dataset item",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of dataset item"
+            },
+            {
+                "Name" : "pDataset",
+                "Type" : "ModelDatasetItem",
+                "Description" : "the dataset item to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addModelState(ref ModelState pState)",
+        "Description" : "Add the model state",
+        "Params" : [
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the model state to add"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelState(ref ModelState pState)",
+        "Description" : "Remove the model state",
+        "Params" : [
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the model state to remove"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelStateCount()",
+        "Description" : "Get the model state count",
+        "Params" : [],
+        "Return" : "the count of states",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getModelState(int idx, ref ModelState pState)",
+        "Description" : "get the model state",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of state"
+            },
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the return of model state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelState(string pStateId, ref ModelState pState)",
+        "Description" : "get the model state",
+        "Params" : [
+            {
+                "Name" : "pStateId",
+                "Type" : "string",
+                "Description" : "the id of state"
+            },
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the return of model state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateModelState(int idx, ref ModelState pState)",
+        "Description" : "update the model state",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of state"
+            },
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the model state to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateModelState(string pStateId, ref ModelState pState)",
+        "Description" : "update the model state",
+        "Params" : [
+            {
+                "Name" : "pStateId",
+                "Type" : "string",
+                "Description" : "the id of state"
+            },
+            {
+                "Name" : "pState",
+                "Type" : "ModelState",
+                "Description" : "the model state to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addModelStateTransition(string pFromStateId, string pToStateId)",
+        "Description" : "Add the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromStateId",
+                "Type" : "string",
+                "Description" : "the id of source state"
+            },
+            {
+                "Name" : "pToStateId",
+                "Type" : "string",
+                "Description" : "the id of destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addModelStateTransition(ref ModelState pFromState, ref ModelState pToState)",
+        "Description" : "Add the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromState",
+                "Type" : "ModelState",
+                "Description" : "the source state"
+            },
+            {
+                "Name" : "pToState",
+                "Type" : "ModelState",
+                "Description" : "the destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelStateTransition(string pFromStateId, string pToStateId)",
+        "Description" : "Remove the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromStateId",
+                "Type" : "string",
+                "Description" : "the id of source state"
+            },
+            {
+                "Name" : "pToStateId",
+                "Type" : "string",
+                "Description" : "the id of destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelStateTransition(ref ModelState pFromState, ref ModelState pToState)",
+        "Description" : "Remove the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromState",
+                "Type" : "ModelState",
+                "Description" : "the source state"
+            },
+            {
+                "Name" : "pToState",
+                "Type" : "ModelState",
+                "Description" : "the destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelStateTransitionCount()",
+        "Description" : "Get the count of model state transitions",
+        "Params" : [],
+        "Return" : "the count of model state transitions",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getModelStateTransition(int idx, ref ModelState pFromState, ref ModelState pToState)",
+        "Description" : "Get the model state transition",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of model state transition"
+            },
+            {
+                "Name" : "pFromState",
+                "Type" : "ModelState",
+                "Description" : "the source state"
+            },
+            {
+                "Name" : "pToState",
+                "Type" : "ModelState",
+                "Description" : "the destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelStateTransition(int idx, ref ModelStateTransition pStateTransition)",
+        "Description" : "Get the model state transition",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of model state transition"
+            },
+            {
+                "Name" : "pStateTransition",
+                "Type" : "ModelStateTransition",
+                "Description" : ""
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "existModelStatetTransition(string pFromStateId, string pToStateId)",
+        "Description" : "Check the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromStateId",
+                "Type" : "string",
+                "Description" : "the id of source state"
+            },
+            {
+                "Name" : "pToStateId",
+                "Type" : "string",
+                "Description" : "the id of destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "existModelStatetTransition(ref ModelState pFromState, ref ModelState pToState)",
+        "Description" : "Check the model state transition",
+        "Params" : [
+            {
+                "Name" : "pFromState",
+                "Type" : "ModelState",
+                "Description" : "the source state"
+            },
+            {
+                "Name" : "pToState",
+                "Type" : "ModelState",
+                "Description" : "the destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateModelStateTransition(int idx, string pFromStateId, string pToStateId)",
+        "Description" : "Update the model state transition",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of model state transition"
+            },
+            {
+                "Name" : "pFromStateId",
+                "Type" : "string",
+                "Description" : "the id of source state"
+            },
+            {
+                "Name" : "pToStateId",
+                "Type" : "string",
+                "Description" : "the id of destination state"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "compareOther(IModelBehavior pBehavior, ref string obj, ref string name)",
+        "Description" : "Compare with other attribute",
+        "Params" : [
+            {
+                "Name" : "pBehavior",
+                "Type" : "IModelBehavior",
+                "Description" : "another ModelBehavior object"
+            },
+            {
+                "Name" : "obj",
+                "Type" : "string",
+                "Description" : ""
+            },
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : ""
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    }
+]

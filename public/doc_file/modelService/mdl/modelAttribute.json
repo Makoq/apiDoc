@@ -1,0 +1,251 @@
+[
+	{
+        "Name" : "loadFromXml(XmlElement pModelClassElement)",
+        "Description" : "Load Attribute from XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Attribute in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "formatToXml(XmlElement pModelClassElement)",
+        "Description" : "Format Attribute to XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Attribute in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getCategoryCount()",
+        "Description" : "Get the category count",
+        "Params" : [],
+        "Return" : "count of categorys",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getCategory(int idx, ref ModelCategory pModelCategory)",
+        "Description" : "Get the category",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of Category"
+            },
+			{
+                "Name" : "pModelCategory",
+                "Type" : "ModelCategory",
+                "Description" : "the return of this ModelCategory"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getLocalAttribute(int idx, ref LocalAttribute pLocalAttribute)",
+        "Description" : "Get the local attribute",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of Attribute"
+            },
+			{
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the return of this LocalAttribute"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getLocalAttribute(ELocalizationType pLocalType, ref LocalAttribute pLocalAttribute)",
+        "Description" : "Get the local attribute",
+        "Params" : [
+            {
+                "Name" : "pLocalType",
+                "Type" : "ELocalizationType",
+                "Description" : "the enumeration of localization type"
+            },
+            {
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the return of LocalAttribute"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getLocalAttributeCount()",
+        "Description" : "Get the local attribute count",
+        "Params" : [],
+        "Return" : "count of local attributes",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "addCategoryInfo(ref ModelCategory pCategoryInfo)",
+        "Description" : "Add the category",
+        "Params" : [
+            {
+                "Name" : "pCategoryInfo",
+                "Type" : "ModelCategory",
+                "Description" : "the object of ModelCategory"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addLocalAttributeInfo(ref LocalAttribute pLocalAttribute)",
+        "Description" : "Add the local attribute",
+        "Params" : [
+            {
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the object of LocalAttribute"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeCategory(int idx)",
+        "Description" : "Remove the category",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of category"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeCategory(ref ModelCategory pCategoryInfo)",
+        "Description" : "Remove the category",
+        "Params" : [
+            {
+                "Name" : "pCategoryInfo",
+                "Type" : "ModelCategory",
+                "Description" : "the category to remove"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeLocalAttribute(int idx)",
+        "Description" : "Remove the local attribute",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of local attribute"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeLocalAttribute(ref LocalAttribute pLocalAttribute)",
+        "Description" : "Remove the local attribute",
+        "Params" : [
+            {
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the local attribute to remove"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateCategory(int idx, ref ModelCategory pCategoryInfo)",
+        "Description" : "Update the category",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of category"
+            },
+            {
+                "Name" : "pCategoryInfo",
+                "Type" : "ModelCategory",
+                "Description" : "the category to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateLocalAttribute(int idx, ref LocalAttribute pLocalAttribute)",
+        "Description" : "Update the local attribute",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of local attribute"
+            },
+            {
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the local attribute to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "updateLocalAttribute(ELocalizationType pLocalType, ref LocalAttribute pLocalAttribute)",
+        "Description" : "Update the local attribute",
+        "Params" : [
+            {
+                "Name" : "pLocalType",
+                "Type" : "ELocalizationType",
+                "Description" : "the enumeration of localization type"
+            },
+            {
+                "Name" : "pLocalAttribute",
+                "Type" : "LocalAttribute",
+                "Description" : "the local attribute to update"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "compareOther(IModelAttribute pAttribute, ref string obj, ref string name)",
+        "Description" : "Compare with other attribute",
+        "Params" : [
+            {
+                "Name" : "pAttribute",
+                "Type" : "IModelAttribute",
+                "Description" : "another ModelAttribute object"
+            },
+            {
+                "Name" : "obj",
+                "Type" : "string",
+                "Description" : ""
+            },
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : ""
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    }
+]

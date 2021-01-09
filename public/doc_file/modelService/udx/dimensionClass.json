@@ -1,0 +1,78 @@
+[
+{
+        "Name" : "Add_Localization(LocalizationClass local)",
+        "Description" : "Add Localization",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationClass",
+                "Description" : "Localization value"
+            }
+        ]
+    },
+	{
+        "Name" : "IsLocalExistence(LocalizationClass local)",
+        "Description" : "Determines whether the described object exists in the localized list",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationClass",
+                "Description" : "Localization value"
+            }
+        ],
+        "Return" : "Does it exist",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "IsLocalExistence(LocalizationEnum local)",
+        "Description" : "Determine whether a certain type of description exists in the localized list",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationEnum",
+                "Description" : "LocalizationEnum value"
+            }
+        ],
+        "Return" : "Does it exist",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "Remove_Localization(LocalizationClass local)",
+        "Description" : "Delete objects in localization list",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationClass",
+                "Description" : "LocalizationClass value"
+            }
+        ],
+        "Return" : "Is the deletion successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "Remove_Localization(LocalizationEnum local)",
+        "Description" : "Delete objects in LocalizationEnum list",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationEnum",
+                "Description" : "LocalizationEnum value"
+            }
+        ],
+        "Return" : "Is the deletion successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "Return_Localization(LocalizationEnum local)",
+        "Description" : "Gets the localized object according to the localized type",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationEnum",
+                "Description" : "LocalizationEnum value"
+            }
+        ],
+        "Return" : "localized object",
+        "ReturnType" : "LocalizationClass"
+    }
+	]

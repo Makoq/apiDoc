@@ -1,0 +1,15 @@
+[
+{
+        "Name" : "Equal(Vector4d v1)",
+        "Description" : "Compare whether the vertices are the same",
+		"Params" : [
+            {
+                "Name" : "v1",
+                "Type" : "Vector4d",
+                "Description" : "Vertex data to be compared"
+            }
+        ],
+        "Return" : "Is the compare successful",
+        "ReturnType" : "bool"
+    }
+]

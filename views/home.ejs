@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenGMS Dev</title>
+    <link rel="stylesheet" href="./stylesheets/common.css" />
+    <link rel="stylesheet" href="./stylesheets/home.css" />
+</head>
+<body>
+    <div class="container">
+        <!--页眉-->
+        <% include common/header %>
+        <!--主要内容-->
+        <div class="main" style="display:flex">
+            <div class="main-content">
+                <div class="title">
+                    <h1 class="title-h1">OpenGMS Dev Guides</h1>
+                    <h2 class="title-h2">Open Geographic Modeling and Simulation Platform development guides</h2>
+                </div>
+                <div class="tools">
+                    <a href="./download" class="tools-item" style="background-image:url('./images/download.png')">
+                        <span>Download</span>
+                    </a>
+                    <a href="./doc" class="tools-item" style="background-image:url('./images/API.png')">
+                        <span>API Doc</span>
+                    </a>
+                    <a href="./community" class="tools-item" style="background-image:url('./images/community.png')">
+                        <span>Community</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--页脚-->
+        <%include common/footer%>
+    </div>
+</body>
+<script src="./javascripts/jquery.min.js"></script>
+</html>

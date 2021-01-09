@@ -1,0 +1,174 @@
+[
+{
+        "Name" : "getName()",
+        "Description" : "Get name(Udx schema name)",
+        "Params" : [
+        ],
+        "Return" : "Udx node schema name",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "getDescription()",
+        "Description" : "Get description(Udx schema description)",
+        "Params" : [
+        ],
+        "Return" : "Udx node schema description",
+        "ReturnType" : "UdxNodeDescription"
+    },
+	{
+        "Name" : "modifyName(string pName)",
+        "Description" : "modify Udx schema name",
+		"Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "string",
+                "Description" : "Name to be modified"
+            }
+        ],
+        "Return" : "Is the modify successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getParentNode()",
+        "Description" : "Get Udx schema parent node",
+        "Params" : [
+        ],
+        "Return" : "Udx schema parent node",
+        "ReturnType" : "UdxNodeSchema"
+    },
+	{
+        "Name" : "getChildNodeCount()",
+        "Description" : "Get the number of Udx schema child nodes",
+        "Params" : [
+        ],
+        "Return" : "the number of Udx schema child nodes",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getChildNode(int idx)",
+        "Description" : "Get child node by location",
+		"Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "Child node location"
+            }
+        ],
+        "Return" : "the child node",
+        "ReturnType" : "UdxNodeSchema"
+    },
+	{
+        "Name" : "addChildNode(string pName, UdxNodeDescription pDescription)",
+        "Description" : "add child node",
+		"Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "string",
+                "Description" : "Child node name"
+            },{
+                "Name" : "pDescription",
+                "Type" : "UdxNodeDescription",
+                "Description" : "Udx Node Description"
+            }
+        ],
+        "Return" : "Added nodes",
+        "ReturnType" : "UdxNodeSchema"
+    },
+	{
+        "Name" : "addChildNode(string pName, ESchemaNodeType pNodeType, string pNodeInfo = \"\")",
+        "Description" : "add child node",
+		"Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "string",
+                "Description" : "Child node name"
+            },{
+                "Name" : "pNodeType",
+                "Type" : "ESchemaNodeType",
+                "Description" : "Udx schema type"
+            },{
+                "Name" : "pNodeInfo",
+                "Type" : "string",
+                "Description" : ""
+            }
+        ],
+        "Return" : "Added nodes",
+        "ReturnType" : "UdxNodeSchema"
+    },
+	{
+        "Name" : "removeChildNode(UdxNodeSchema pNode)",
+        "Description" : "remove child node",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNodeSchema",
+                "Description" : "Child nodes to be removed"
+            }
+        ],
+        "Return" : "Is the remove successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeChildNode(int idx)",
+        "Description" : "Remove child nodes based on location",
+		"Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "Location of child nodes"
+            }
+        ],
+        "Return" : "Is the remove successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "setExtension(int flag)",
+        "Description" : "set extension value",
+		"Params" : [
+            {
+                "Name" : "flag",
+                "Type" : "int",
+                "Description" : "extension value"
+            }
+        ]
+    },
+	{
+        "Name" : "getExtension()",
+        "Description" : "get extension value",
+        "Params" : [
+        ],
+        "Return" : "extension value",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "compareOther(UdxNodeSchema pNode)",
+        "Description" : "UdxNodeSchema is compared with others",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNodeSchema",
+                "Description" : "UdxNodeSchema to be compared"
+            }
+        ],
+        "Return" : "Is the compare successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "compareNodeInfo(UdxNodeSchema pNode1, UdxNodeSchema pNode2)",
+        "Description" : "Comparison of two UdxNodeSchema",
+		"Params" : [
+            {
+                "Name" : "pNode1",
+                "Type" : "UdxNodeSchema",
+                "Description" : "UdxNodeSchema to be compared"
+            },
+			{
+                "Name" : "pNode2",
+                "Type" : "UdxNodeSchema",
+                "Description" : "UdxNodeSchema to be compared"
+            }
+        ],
+        "Return" : "Is the compare successful",
+        "ReturnType" : "bool"
+    }
+	]

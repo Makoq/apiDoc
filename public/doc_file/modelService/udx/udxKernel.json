@@ -1,0 +1,57 @@
+[
+{
+        "Name" : "getNode()",
+        "Description" : "get node",
+        "Params" : [
+        ],
+        "Return" : "UdxNode",
+        "ReturnType" : "UdxNode"
+    },
+	{
+        "Name" : "getType()",
+        "Description" : "get kernel type",
+        "Params" : [
+        ],
+        "Return" : "EKernelType",
+        "ReturnType" : "EKernelType"
+    },
+	{
+        "Name" : "KernelType2String(EKernelType pType)",
+        "Description" : "kernel type to string",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "EKernelType",
+                "Description" : "kernel type of EKernelType"
+            }
+        ],
+        "Return" : "to the value of string",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "String2KernelType(string pType)",
+        "Description" : "The type of string type is converted to kernel type",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "string",
+                "Description" : "kernel type of string"
+            }
+        ],
+        "Return" : "to the value of EKernelType",
+        "ReturnType" : "EKernelType"
+    },
+	{
+        "Name" : "String2KernelType(string pType)",
+        "Description" : "The type of string type is converted to kernel type",
+		"Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "string",
+                "Description" : "kernel type of string"
+            }
+        ],
+        "Return" : "To the value of EKernelType",
+        "ReturnType" : "EKernelType"
+    }
+	]

@@ -1,0 +1,35 @@
+[{
+        "Name" : "setTypedValue(double pX, double pY, double pZ, double pM)",
+        "Description" : "Sets the value of the type",
+		"Params" : [
+            {
+                "Name" : "pX",
+                "Type" : "double",
+                "Description" : "value to be set"
+            },{
+                "Name" : "pY",
+                "Type" : "double",
+                "Description" : "value to be set"
+            },
+			{
+                "Name" : "pZ",
+                "Type" : "double",
+                "Description" : "value to be set"
+            },{
+                "Name" : "pM",
+                "Type" : "double",
+                "Description" : "value to be set"
+            }
+        ],
+        "Return" : "Is the setting successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getTypedValue()",
+        "Description" : "Get type value",
+        "Params" : [
+        ],
+        "Return" : "type value",
+        "ReturnType" : "int"
+    }
+	]

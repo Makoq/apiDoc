@@ -1,0 +1,161 @@
+[
+    
+    {
+        
+        "Name" : "Upload file",
+        "URL":"/data",
+        "Method":"POST",
+        "Description" : "Upload data resourves",
+        "Params" : [
+            {
+                "Name" : "datatag",
+                "Type" : "String",
+                "Description" : "The tag of uploading data."
+            },
+            {
+                "Name" : "datafile",
+                "Type" : "File",
+                "Description" : "The uploading data files."
+            }
+        ],
+        "Return" : "Uploaded data files information including file name and download id.",
+        "ReturnType" : "JSON",
+        "Request": "upload_req",
+        "Response":"upload_rsp"
+    },
+    {
+        "Name" : "Upload file(With configuration file) ",
+        "URL":"/configData",
+        "Method":"POST",
+        "Description" : "Upload data resourves",
+        "Params" : [
+            {
+                "Name" : "name",
+                "Type" : "String",
+                "Description" : "The name(without suffix) of uploading data."
+            },
+            {
+                "Name" : "userId",
+                "Type" : "String",
+                "Description" : "The user info of uploading data files."
+            },
+            {
+                "Name" : "userId",
+                "Type" : "String",
+                "Description" : "The user info of uploading data files."
+            },
+            {
+                "Name" : "serverNode",
+                "Type" : "String",
+                "Description" : "The user info of uploading data files."
+            },
+            {
+                "Name" : "origination",
+                "Type" : "String",
+                "Description" : "The user info of uploading data files."
+            },
+            {
+                "Name" : "datafile",
+                "Type" : "File",
+                "Description" : "The uploading data files."
+            }
+        ],
+        "Return" : "Uploaded data files information including file name and download id.",
+        "ReturnType" : "JSON",
+        "Request": "upload_req",
+        "Response":"upload_rsp"
+    },
+    {
+        "Name" : "Check Uploading Data by MD5",
+        "URL":"/data?md5=[md5] //[md5] is the md5 of the file",
+        "Method":"GET",
+        "Description" : "Check Uploading Data by MD5",
+        "Return" : "the id that indating data storage in the server.",
+        "Params" : [
+            {
+                "Name" : "md5",
+                "Type" : "String",
+                "Description" : "[md5] is the md5 of the file."
+            }
+        ],
+        "ReturnType" : "JSON",
+        "Request":"check_md5_req",
+        "Response":"check_md5_rsp"
+    },
+    {
+        "Name" : "Download Data",
+        "URL":"/data/[id] //[md5] is the md5 of the file",
+        "Method":"GET",
+        "Description" : "Download Data",
+        "Return" : "File",
+        "Params" : [],
+        "ReturnType" : "File"
+         
+    },
+    {
+        "Name" : "Delete Data",
+        "URL":"/data/[id]",
+        "Description" : "Delete Data",
+        "Method":"DELETE",
+        "Return" : "JSON",
+        "Params" : [],
+        "ReturnType" : "JSON",
+        "Response":"delete_rsp"
+        
+         
+    },
+    {
+        "Name" : "Preview",
+        "URL":"/data/[id]/preview //[id] is the id of data",
+        "Method":"GET",
+        "Description" : "Preview",
+        "Return" : "File",
+        "Params" : [],
+        "ReturnType" : "File",
+        "Response":"preview_rsp"
+        
+         
+    },
+    {
+        "Name" : "Metadata",
+        "URL":"/data/[id]/metadata //[id] is the id of data",
+        "Method":"GET",
+        "Description" : "Metadata",
+        "Return" : "JSON",
+        "Params" : [],
+        "ReturnType" : "JSON",
+        "Response":"metadata_rsp"
+        
+         
+    },
+    {
+        "Name" : "Batch Download Data",
+        "URL":"/batchData",
+        "Method":"GET",
+        "Description" : "Batch Download Data",
+        "Return" : "JSON",
+        "Params" : [],
+        "ReturnType" : "File",
+        "Request":"batch_download_req",
+        "Response":"batch_download_rsp"
+    },
+    {
+        "Name" : "Batch Delete Data",
+        "URL":"/batchData",
+        "Method":"DELETE",
+        "Description" : "Batch Delete Data",
+        "Return" : "JSON",
+        "Params" : [],
+        "ReturnType" : "JSON",
+        "Request":"batch_delete_req",
+        "Response":"batch_delete_rsp"
+    }
+
+
+
+
+     
+
+
+
+]

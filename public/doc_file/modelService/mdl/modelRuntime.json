@@ -1,0 +1,387 @@
+[
+	{
+        "Name" : "loadFromXml(XmlElement pModelClassElement)",
+        "Description" : "Load Runtime from XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Runtime in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "formatToXml(XmlElement pModelClassElement)",
+        "Description" : "Format Runtime to XmlElement",
+        "Params" : [
+            {
+                "Name" : "pModelClassElement",
+                "Type" : "XmlElement",
+                "Description" : "the Runtime in MDL"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getName()",
+        "Description" : "Get the name of runtime",
+        "Params" : [],
+        "Return" : "the name of runtime",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "setName(string pName)",
+        "Description" : "Set the name of runtime",
+        "Params" : [
+            {
+                "Name" : "pName",
+                "Type" : "string",
+                "Description" : "the name of runtime"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+	{
+        "Name" : "getVersion()",
+        "Description" : "Get the version of runtime",
+        "Params" : [],
+        "Return" : "the version of runtime",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "setVersion(string pVersion)",
+        "Description" : "Set the version of runtime",
+        "Params" : [
+            {
+                "Name" : "pVersion",
+                "Type" : "string",
+                "Description" : "the version of runtime"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+	{
+        "Name" : "getEntry()",
+        "Description" : "Get the entry of runtime",
+        "Params" : [],
+        "Return" : "the entry of runtime",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "setEntry(string pEntry)",
+        "Description" : "Set the entry of runtime",
+        "Params" : [
+            {
+                "Name" : "pEntry",
+                "Type" : "string",
+                "Description" : "the entry of runtime"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+	{
+        "Name" : "getBaseDirectory()",
+        "Description" : "Get the base directory of runtime",
+        "Params" : [],
+        "Return" : "the base directory of runtime",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "setBaseDirectory(string pDirectory)",
+        "Description" : "Set the base directory of runtime",
+        "Params" : [
+            {
+                "Name" : "pDirectory",
+                "Type" : "string",
+                "Description" : "the base directory of runtime"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+	{
+        "Name" : "addHardwareRequirement(ref HardwareRequirement pRequirement)",
+        "Description" : "Add the hardware requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "HardwareRequirement",
+                "Description" : "the hardware requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addSoftwareRequirement(ref SoftwareRequirement pRequirement)",
+        "Description" : "Add the software requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "SoftwareRequirement",
+                "Description" : "the software requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addModelAssembly(ref ModelAssembly pRequirement)",
+        "Description" : "Add the model assembly requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "ModelAssembly",
+                "Description" : "the model assembly requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "addSupportiveResource(ref SupportiveResource pRequirement)",
+        "Description" : "Add the support resource requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "SupportiveResource",
+                "Description" : "the supportive resource requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getHardwareRequirementCount()",
+        "Description" : "Get the count of hardware requirements",
+        "Params" : [],
+        "Return" : "the count of hardware requirements",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getSoftwareRequirementCount()",
+        "Description" : "Get the count of software requirements",
+        "Params" : [],
+        "Return" : "the count of software requirements",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getModelAssemblyCount()",
+        "Description" : "Get the count of model assemblies",
+        "Params" : [],
+        "Return" : "the count of model assemblies",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getSupportiveResourceCount()",
+        "Description" : "Get the count of supportive resources",
+        "Params" : [],
+        "Return" : "the count of hardware requirements",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getHardwareRequirement(int idx, ref HardwareRequirement pRequirement)",
+        "Description" : "Get the hardware requirement",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of hardware requirement"
+            },
+            {
+                "Name" : "pRequirement",
+                "Type" : "HardwareRequirement",
+                "Description" : "the return of hardware requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getSoftwareRequirement(int idx, ref SoftwareRequirement pRequirement)",
+        "Description" : "Get the software requirement",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of software requirement"
+            },
+            {
+                "Name" : "pRequirement",
+                "Type" : "SoftwareRequirement",
+                "Description" : "the return of software requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getModelAssembly(int idx, ref ModelAssembly pRequirement)",
+        "Description" : "Get the model assembly",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of model assembly"
+            },
+            {
+                "Name" : "pRequirement",
+                "Type" : "ModelAssembly",
+                "Description" : "the return of model assembly"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getSupportiveResource(int idx, ref SupportiveResource pRequirement)",
+        "Description" : "Get the supportive resource",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of supportive resource"
+            },
+            {
+                "Name" : "pRequirement",
+                "Type" : "SupportiveResource",
+                "Description" : "the return of supportive resource"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeHardwareRequirementref(HardwareRequirement pRequirement)",
+        "Description" : "Remove the hardware requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "HardwareRequirement",
+                "Description" : "the hardware requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeSoftwareRequirement(ref SoftwareRequirement pRequirement)",
+        "Description" : "Remove the software requirement",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "SoftwareRequirement",
+                "Description" : "the software requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelAssembly(ref ModelAssembly pRequirement)",
+        "Description" : "Remove the model assembly",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "ModelAssembly",
+                "Description" : "the model assembly"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeSupportiveResource(ref SupportiveResource pRequirement)",
+        "Description" : "Remove the supportive resource",
+        "Params" : [
+            {
+                "Name" : "pRequirement",
+                "Type" : "SupportiveResource",
+                "Description" : "the supportive resource"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeHardwareRequirement(int idx)",
+        "Description" : "Remove the hardware requirement",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of hardware requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeSoftwareRequirement(int idx)",
+        "Description" : "Remove the software requirement",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of software requirement"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeModelAssembly(int idx)",
+        "Description" : "Remove the model assembly",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of model assembly"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "removeSupportiveResource(int idx)",
+        "Description" : "Remove the supportive resource",
+        "Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "the index of supportive resource"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "compareOther(IModelRuntime pRuntime, ref string obj, ref string name)",
+        "Description" : "Compare with other runtime",
+        "Params" : [
+            {
+                "Name" : "pRuntime",
+                "Type" : "IModelRuntime",
+                "Description" : "another Runtime object"
+            },
+            {
+                "Name" : "obj",
+                "Type" : "string",
+                "Description" : ""
+            },
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : ""
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    }
+]

@@ -1,0 +1,94 @@
+[
+{
+        "Name" : "LoadFromXmlFile(String fileName)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "String",
+                "Description" : "file name to load"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlFile(String fileName)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "String",
+                "Description" : "the name of the file that needs to be converted to an XML file"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "LoadFromXmlStream(String xml_str)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "xml_str",
+                "Type" : "String",
+                "Description" : "xml stream name to load"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlStream()",
+        "Description" : "format to xml stream",
+        "Params" : [
+        ],
+        "Return" : "xml stream",
+        "ReturnType" : "String"
+    },
+	{
+        "Name" : "ParseXDO(UdxNode containerNode, XmlElement element)",
+        "Description" : "XDO parse",
+		"Params" : [
+            {
+                "Name" : "containerNode",
+                "Type" : "UdxNode",
+                "Description" : "UDX node to be parsed"
+            },{
+                "Name" : "element",
+                "Type" : "XmlElement",
+                "Description" : "xml element data"
+            }
+        ]
+    },
+	{
+        "Name" : "FormatXDO(UdxNode pNode, XmlElement element)",
+        "Description" : "XDO format",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNode",
+                "Description" : "UDX node to be format"
+            },{
+                "Name" : "element",
+                "Type" : "XmlElement",
+                "Description" : "xml element data"
+            }
+        ]
+    },
+	{
+        "Name" : "FormatXDO(UdxNode pNode, XmlElement element)",
+        "Description" : "XDO format",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNode",
+                "Description" : "UDX node to be format"
+            },{
+                "Name" : "element",
+                "Type" : "XmlElement",
+                "Description" : "xml element data"
+            }
+        ]
+    }
+	]

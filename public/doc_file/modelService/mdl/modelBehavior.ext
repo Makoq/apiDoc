@@ -1,0 +1,8 @@
+!!loadFromXml
+
+name = lines[i].replace("!!", "");
+chunk[name] = "";
+&lt;Behavior&gt;
+    &lt;State&gt;
+    &lt;/State&gt;
+&lt;/Behavior&gt;

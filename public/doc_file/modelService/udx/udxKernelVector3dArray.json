@@ -1,0 +1,45 @@
+[{
+        "Name" : "addTypedValue(double pX, double pY, double pZ)",
+        "Description" : "Add type value",
+		"Params" : [
+            {
+                "Name" : "pX",
+                "Type" : "double",
+                "Description" : "Type value to be added"
+            },
+			{
+                "Name" : "pY",
+                "Type" : "double",
+                "Description" : "Type value to be added"
+            },
+			{
+                "Name" : "pZ",
+                "Type" : "double",
+                "Description" : "Type value to be added"
+            }
+        ],
+        "Return" : "Is the addition successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getTypedValueByIndex(int idx)",
+        "Description" : "Get the type value through index",
+		"Params" : [
+            {
+                "Name" : "idx",
+                "Type" : "int",
+                "Description" : "The location of the value"
+            }
+        ],
+        "Return" : "type value",
+        "ReturnType" : "int"
+    },
+	{
+        "Name" : "getCount()",
+        "Description" : "Gets the number of values in the current list",
+        "Params" : [
+        ],
+        "Return" : "the number of values in the current list",
+        "ReturnType" : "int"
+    }
+	]

@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="header-logo">
+        <a href="https://geomodeling.njnu.edu.cn">
+            <img src="./images/OpenGMS-logo.png" style="height:50px;vertical-align:middle" />
+        </a>
+    </div>
+    <nav class="header-nav">
+        <% pages.forEach(item => { %>
+            <a href="<%= item.url %>" class="header-nav-a <%= item.pageName.toLowerCase() == pageName.toLowerCase() ? 'selected' : '' %>"><%= item.pageName %></a>
+        <% }); %>
+    </nav>
+</div>

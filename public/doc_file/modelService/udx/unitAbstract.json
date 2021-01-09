@@ -1,0 +1,52 @@
+[
+{
+        "Name" : "Add_Localization(LocalizationClass item)",
+        "Description" : "Add Localization",
+		"Params" : [
+            {
+                "Name" : "item",
+                "Type" : "LocalizationClass",
+                "Description" : "LocalizationClass value"
+            }
+        ]
+    },
+	{
+        "Name" : "Remove_Localization(LocalizationClass item)",
+        "Description" : "Remove Localization",
+		"Params" : [
+            {
+                "Name" : "item",
+                "Type" : "LocalizationClass",
+                "Description" : "LocalizationClass value"
+            }
+        ],
+        "Return" : "Is the remove successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "Remove_Localization(LocalizationEnum local)",
+        "Description" : "Remove LocalizationEnum",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationEnum",
+                "Description" : "LocalizationEnum value"
+            }
+        ],
+        "Return" : "Is the remove successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "Return_Localization(LocalizationEnum local)",
+        "Description" : "Gets the localized enum object according to the localized type",
+		"Params" : [
+            {
+                "Name" : "local",
+                "Type" : "LocalizationEnum",
+                "Description" : "LocalizationEnum value"
+            }
+        ],
+        "Return" : "localized enum object",
+        "ReturnType" : "LocalizationEnum"
+    }
+	]

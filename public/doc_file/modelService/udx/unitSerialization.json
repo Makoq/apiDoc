@@ -1,0 +1,28 @@
+[
+{
+        "Name" : "Serialization(UnitAbstract unit)",
+        "Description" : "Serialization base unit",
+		"Params" : [
+            {
+                "Name" : "unit",
+                "Type" : "UnitAbstract",
+                "Description" : "Unit Abstract"
+            }
+        ],
+        "Return" : "Basic unit after serialization",
+        "ReturnType" : "string"
+    },
+	{
+        "Name" : "DeSerialization(string xmlStr)",
+        "Description" : "DeSerialization unit",
+		"Params" : [
+            {
+                "Name" : "xmlStr",
+                "Type" : "string",
+                "Description" : "Unit xml str value"
+            }
+        ],
+        "Return" : "Basic unit after deSerialization",
+        "ReturnType" : "UnitAbstract"
+    }
+]

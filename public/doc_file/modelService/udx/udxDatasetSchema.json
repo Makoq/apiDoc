@@ -1,0 +1,132 @@
+[{
+        "Name" : "LoadFromXmlFile(String fileName)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "String",
+                "Description" : "file name to load"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlFile(String fileName)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "String",
+                "Description" : "the name of the file that needs to be converted to an XML file"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "LoadFromXmlStream(String xml_str)",
+        "Description" : "Load xml file",
+		"Params" : [
+            {
+                "Name" : "xml_str",
+                "Type" : "String",
+                "Description" : "xml stream name to load"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlStream()",
+        "Description" : "format to xml stream",
+        "Params" : [
+        ],
+        "Return" : "xml stream",
+        "ReturnType" : "String"
+    },
+	{
+        "Name" : "LoadFromXmlElement(XmlElement rootEle)",
+        "Description" : "Load xml element value",
+		"Params" : [
+            {
+                "Name" : "rootEle",
+                "Type" : "XmlElement",
+                "Description" : "xml element value"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlElement(ref XmlElement xmlElement)",
+        "Description" : "xml element formatting",
+		"Params" : [
+            {
+                "Name" : "xmlElement",
+                "Type" : "XmlElement",
+                "Description" : "xml element value"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "FormatToXmlElement(ref XmlElement xmlElement)",
+        "Description" : "xml element formatting",
+		"Params" : [
+            {
+                "Name" : "xmlElement",
+                "Type" : "XmlElement",
+                "Description" : "xml element value"
+            }
+        ],
+        "Return" : "true or false",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "ParseXDO(UdxNodeSchema containerNode, XmlElement element)",
+        "Description" : "XDO parse",
+		"Params" : [
+            {
+                "Name" : "containerNode",
+                "Type" : "UdxNodeSchema",
+                "Description" : "UDX node schema to be parsed"
+            },{
+                "Name" : "element",
+                "Type" : "XmlElement",
+                "Description" : "xml element data"
+            }
+        ]
+    },
+	{
+        "Name" : "FormatXDO(UdxNodeSchema pNode, XmlElement element, XmlElement rootElement)",
+        "Description" : "XDO format",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "UdxNodeSchema",
+                "Description" : "UDX node schema to be format"
+            },{
+                "Name" : "element",
+                "Type" : "XmlElement",
+                "Description" : "xml element data"
+            },{
+                "Name" : "rootElement",
+                "Type" : "XmlElement",
+                "Description" : "root xml element data"
+            }
+        ]
+    },
+	{
+        "Name" : "getNodeWithId(string pNodeId)",
+        "Description" : "get UDX node schema with node id",
+		"Params" : [
+            {
+                "Name" : "pNode",
+                "Type" : "string",
+                "Description" : "UDX node schema id"
+            }
+        ]
+    }
+	]

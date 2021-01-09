@@ -1,0 +1,184 @@
+[
+    {
+        "Name" : "getName()",
+        "Description" : "Get model name (computable model name)",
+        "Params" : [],
+        "Return" : "model name",
+        "ReturnType" : "string"
+    },
+    {
+        "Name" : "setName(string name)",
+        "Description" : "Get model name (computable model name)",
+        "Params" : [
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : "the name of model"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+    {
+        "Name" : "getUID()",
+        "Description" : "Get model UID (computable model UID)",
+        "Params" : [],
+        "Return" : "The UID of computable model",
+        "ReturnType" : "string",
+        "Note" : "The UID is a unique id for model package, and it is a Globally Unique Identifier (GUID)"
+    },
+    {
+        "Name" : "setUID(string UID)",
+        "Description" : "Get model UID (computable model name)",
+        "Params" : [
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : "the name of model"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+    {
+        "Name" : "getType()",
+        "Description" : "Get model type",
+        "Params" : [],
+        "Return" : "model type",
+        "ReturnType" : "string"
+    },
+    {
+        "Name" : "setType(string pType)",
+        "Description" : "Set the model's type",
+        "Params" : [
+            {
+                "Name" : "pType",
+                "Type" : "String",
+                "Description" : "the model's type"
+            }
+        ],
+        "Return" : "no return",
+        "ReturnType" : "void"
+    },
+    {
+        "Name" : "LoadFromXmlFile(string fileName)",
+        "Description" : "Load the MDL from xml file",
+        "Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "string",
+                "Description" : "the source file name with path"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+    {
+        "Name" : "FormatToXmlFile(string fileName)",
+        "Description" : "Format the MDL class to xml file",
+        "Params" : [
+            {
+                "Name" : "fileName",
+                "Type" : "string",
+                "Description" : "the destination file name with path"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+    {
+        "Name" : "LoadFromXmlStream(string xmlStr)",
+        "Description" : "Load the MDL from string",
+        "Params" : [
+            {
+                "Name" : "xmlStr",
+                "Type" : "string",
+                "Description" : "the string read from mdl file"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+    {
+        "Name" : "FormatToXmlStream(ref string xmlStr)",
+        "Description" : "Format the MDL class to string",
+        "Params" : [
+            {
+                "Name" : "xmlStr",
+                "Type" : "string",
+                "Description" : "the string convert from the MDL class"
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+    {
+        "Name" : "getExecutionStyle()",
+        "Description" : "Get the Execution style",
+        "Params" : [],
+        "Return" : "enumeration(EES_STATE_SIMULATION,EES_SIMPLE_CALCULATION,ES_TIME_SERIES)",
+        "ReturnType" : "EExecutionStyle"
+    },
+    {
+        "Name" : "setExecutionStyle(EExecutionStyle pStyle)",
+        "Description" : "Set the Execution style",
+        "Params" : [
+            {
+                "Name" : "pStyle",
+                "Type" : "EExecutionStyle",
+                "Description" : "EExecutionStyle variable of the Execution style"
+            }
+        ],
+        "Return" : "no result",
+        "ReturnType" : "void"
+    },
+    {
+        "Name" : "compareOther(IModelClass pClass, bool withRuntime, ref string obj, ref string name)",
+        "Description" : "Compare with other MDL",
+        "Params" : [
+            {
+                "Name" : "pClass",
+                "Type" : "IModelClass",
+                "Description" : "another MDL object"
+            },
+            {
+                "Name" : "withRuntime",
+                "Type" : "bool",
+                "Description" : "whether with runtime"
+            },
+            {
+                "Name" : "obj",
+                "Type" : "string",
+                "Description" : ""
+            },
+            {
+                "Name" : "name",
+                "Type" : "string",
+                "Description" : ""
+            }
+        ],
+        "Return" : "True or False",
+        "ReturnType" : "bool"
+    },
+    {
+        "Name" : "getModelAttribute()",
+        "Description" : "Get the attribute of model",
+        "Params" : [],
+        "Return" : "ModelAttribute",
+        "ReturnType" : "IModelAttribute"
+    },
+    {
+        "Name" : "getModelBehavior()",
+        "Description" : "Get the behavior of model",
+        "Params" : [],
+        "Return" : "ModelBehavior",
+        "ReturnType" : "IModelBehavior"
+    },
+    {
+        "Name" : "getModelRuntime()",
+        "Description" : "Get the runtime of model",
+        "Params" : [],
+        "Return" : "ModelRuntime",
+        "ReturnType" : "IModelRuntime"
+    }
+]

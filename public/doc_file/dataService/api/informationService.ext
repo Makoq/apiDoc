@@ -1,0 +1,80 @@
+!!invoke_data_in_node_req
+{
+    dataId:[dataId], //[dataId] the unique identifier of test in serviec node
+ 
+    params:[params], //[params] the params of service, joined by ','
+
+    name:[name], //[name] service name 
+
+    token:[token], //[token]  The specific unique identifier of one specific service node
+
+    reqUsrOid:[reqUsrOid] //[reqUsrOid] user information
+
+    pcsId: [pcsId] //[pcsId] The specific unique identifier of one specific service
+ 
+}
+
+!!invoke_data_in_node_rsp
+{
+    "code": [code], //  [code] shows 0 which means has such data, -1 means err
+    "result": {
+        "uid": [uid] //  download url for the service result  
+    }
+}
+
+
+!!invoke_data_in_dc_id_req
+{
+    token:[token] //  [token]  The specific unique identifier of one specific service node
+    pcsId:[pcsId] // [pcsId] The specific unique identifier of one specific service
+    contDtId:[contDtId] //   The specific unique identifier of data in OpenGMS
+    params:[params] // [params] the possible params of service, joined by ','
+ 
+}
+
+!!invoke_data_in_dc_id_rsp
+{
+    "code": [code], //  [code] shows 0 which means has such data, -1 means err
+    "result": {
+        "uid": [uid], //  download url for the service result  
+        "stout": [stout] //The service performs standard output
+    }
+}
+
+
+!!invoke_data_url_req
+{
+    token:[token] //  [token]  The specific unique identifier of one specific service node
+    pcsId:[pcsId] // [pcsId] The specific unique identifier of one specific service
+    url:[url] //   The single url of data in OpenGMS DataContainer, which is mentioned in fileService
+    params:[params] // [params] the possible params of service, joined by ','
+ 
+}
+
+
+!!invoke_data_url_rsp
+{
+    "code": [code], //  [code] shows 0 which means has such data, -1 means err
+    "result": {
+        "uid": [uid], //  download url for the service result  
+        "stout": [stout] //The service performs standard output
+    }
+}
+
+
+!!invoke_data_urls_req
+{
+    token:[token] //  [token]  The specific unique identifier of one specific service node
+    pcsId:[pcsId] // [pcsId] The specific unique identifier of one specific service
+    urls:[urls] //   The urls of data in OpenGMS DataContainer, which is mentioned in fileService
+    params:[params] // [params] the possible params of service, joined by ','
+ 
+}
+
+
+!!invoke_data_urls_rsp
+{
+    "code": [code], //  [code] shows 0 which means has such data, -1 means err
+    "url":[url] // [url] means download url for the service result
+     
+}

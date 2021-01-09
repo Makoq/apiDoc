@@ -1,0 +1,22 @@
+[{
+        "Name" : "setTypedValue(String pValue)",
+        "Description" : "Sets the value of the type",
+		"Params" : [
+            {
+                "Name" : "pValue",
+                "Type" : "String",
+                "Description" : "value to be set"
+            }
+        ],
+        "Return" : "is the setting successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getTypedValue()",
+        "Description" : "Get type value",
+        "Params" : [
+        ],
+        "Return" : "type value",
+        "ReturnType" : "int"
+    }
+	]

@@ -1,0 +1,51 @@
+!!online_service_rsp
+{
+    code:[code], // [code] shows 0 which means has such data, -1 means err
+    "serviceNodes": {
+        "onlineServiceNode": [
+            {
+                "node": [node], //service node name   
+                "token": [token], //service node unique identifier,
+                "ip":[ip], // service node ip address in public network
+            },
+        ]
+    }
+}
+
+
+!!chekc_service_state_req
+{
+  "token":[token] // [token] means the unique identifier of the specific service node 
+}
+
+!!chekc_service_state_rsp
+{
+  "code":[code], // [code] shows 0 which means has such data, -1 means err
+  "message":[message] //[message] shows 'online' means service node online, 'offline' means service node offline
+}
+
+
+!!chekc_available_service_req
+{
+    token:[token], // [token] means the unique identifier of the specific service node 
+    type:[type] // [type] means service type, including Processing, Visualziation, Data
+}
+
+!!chekc_available_service_rsp
+{
+    "code": [code], //shows 0 which means has such data, -1 means err
+    "servicesAvailable": {
+        "availablePcs": [
+            {
+                "name":[name] //service name   
+                "id": [id] //service id 
+                "dataSet": [
+                    [id] // test data id for the service
+                ],
+                "desc":[desc] //description of the service,
+                "date":[date] //date of the service creation 
+            },
+            
+        ]
+    }
+}

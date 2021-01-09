@@ -1,0 +1,48 @@
+[
+{
+        "Name" : "Add_Units(UnitAbstract unit)",
+        "Description" : "Add Units",
+		"Params" : [
+            {
+                "Name" : "unit",
+                "Type" : "UnitAbstract",
+                "Description" : "Unit Abstract"
+            }
+        ]
+    },
+	{
+        "Name" : "Remove_Units(UnitAbstract unit)",
+        "Description" : "Remove Units",
+		"Params" : [
+            {
+                "Name" : "unit",
+                "Type" : "UnitAbstract",
+                "Description" : "Unit Abstract"
+            }
+        ]
+    },
+	{
+        "Name" : "Remove_Units(string unit_Attribute)",
+        "Description" : "Remove Units",
+		"Params" : [
+            {
+                "Name" : "unit_Attribute",
+                "Type" : "string",
+                "Description" : "Units Attribute"
+            }
+        ]
+    },
+	{
+        "Name" : "Return_Unit(string unit_id)",
+        "Description" : "Get Units",
+		"Params" : [
+            {
+                "Name" : "unit_id",
+                "Type" : "string",
+                "Description" : "unit id"
+            }
+        ],
+        "Return" : "Unit abstract",
+        "ReturnType" : "UnitAbstract"
+    }
+	]

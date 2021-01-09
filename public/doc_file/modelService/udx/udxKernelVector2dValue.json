@@ -1,0 +1,27 @@
+[
+{
+        "Name" : "setTypedValue(double pX, double pY)",
+        "Description" : "Sets the value of the type",
+		"Params" : [
+            {
+                "Name" : "pX",
+                "Type" : "double",
+                "Description" : "value to be set"
+            },{
+                "Name" : "pY",
+                "Type" : "double",
+                "Description" : "value to be set"
+            }
+        ],
+        "Return" : "is the setting successful",
+        "ReturnType" : "bool"
+    },
+	{
+        "Name" : "getTypedValue()",
+        "Description" : "Get type value",
+        "Params" : [
+        ],
+        "Return" : "type value",
+        "ReturnType" : "int"
+    }
+	]
