@@ -29,13 +29,6 @@ function renderDoc(pageName){
                 return;
             }
             res.render(pageName, { "pageName": pageName, "menuObj": JSON.parse(data) });
-            // fs.readFile(path.join(__dirname, "../public/doc_file/dataService/total.json"), "utf-8", (err, dataService) => {
-            //     if(err){
-            //         next(err);
-            //         return;
-            //     }
-            //     res.render(pageName, { "pageName": pageName, "apiTypes": JSON.parse(data), "dataService": JSON.parse(dataService) });
-            // });
         })
     };
 }

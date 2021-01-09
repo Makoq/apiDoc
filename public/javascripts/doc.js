@@ -1,11 +1,10 @@
 var BASE_URL = "./";
 var contentItem = {
-    "api" : new ContentItem("#js-api"),
-    "examples" : new ContentItem("#js-examples"),
-    "serviceContainer": new ContentItem("#js-serviceContainer"),
+    "quickStart" : new ContentItem("#js-quickStart"),
+    "modelServiceContainer": new ContentItem("#js-modelServiceContainer"),
     "dataServiceContainer": new ContentItem("#js-dataServiceContainer"),
-
-    "quickStart" : new ContentItem("#js-quickStart")
+    "api" : new ContentItem("#js-api")
+    // "examples" : new ContentItem("#js-examples"),
 };
 var timer = null;
 
@@ -88,6 +87,34 @@ ContentItem.prototype.renderErr = function(xhr, status, error){
     this.show();
 }
 
+//渲染quickStart部分的内容
+contentItem.quickStart.render = function(){
+    this.dom.html("<h1 class='caption'>Sorry, this page is under development.</h1>");
+    this.show();
+}
+
+//渲染modelServiceContainer部分的内容
+contentItem.modelServiceContainer.render = function(){
+    var _this = this;
+    $.ajax({
+        "type": "get",
+        "url": BASE_URL + "doc_file/serviceContainer/serviceContainer.ejs",
+        "success": function(res){
+            _this.dom.html(res);
+            _this.show();
+        },
+        "error": function(xhr, status, error){
+            _this.renderErr(xhr, status, error);
+        }
+    });
+}
+
+//渲染dataServiceContainer部分的内容
+contentItem.dataServiceContainer.render = function(){
+    this.dom.html("<h1 class='caption'>Sorry, this page is under development.</h1>");
+    this.show();
+};
+
 //渲染API部分的内容
 contentItem.api.render = function(fullTitle, file, ext){
     var _this = this;
@@ -100,7 +127,7 @@ contentItem.api.render = function(fullTitle, file, ext){
                 _this.show();
             },
             "error": function(xhr, status, error){
-                _this.renderErr(xhr, stutus, error);
+                _this.renderErr(xhr, status, error);
             }
         });
         return;
