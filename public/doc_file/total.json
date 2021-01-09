@@ -1,4 +1,6 @@
 {
+    "Quick Start": {},
+    "Model Service Container": {},
     "Model Service Api":[
         {
             "typeName": "MDL",
@@ -171,6 +173,7 @@
             ]
         }
     ],
+    "Data Service Container": {},
     "Data Service Api": [
         {
             "typeName": "Basic",
@@ -215,7 +218,5 @@
                 }
             ]
         }
-    ],
-    "Service Container": {},
-    "Quick Start": {}
+    ]       
 }
