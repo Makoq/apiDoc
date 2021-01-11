@@ -89,8 +89,18 @@ ContentItem.prototype.renderErr = function(xhr, status, error){
 
 //渲染quickStart部分的内容
 contentItem.quickStart.render = function(){
-    this.dom.html("<h1 class='caption'>Sorry, this page is under development.</h1>");
-    this.show();
+    var _this = this;
+    $.ajax({
+        "type": "get",
+        "url": BASE_URL + "doc_file/quickStart/quickStart.ejs",
+        "success": function(res){
+            _this.dom.html(res);
+            _this.show();
+        },
+        "error": function(xhr, status, error){
+            _this.renderErr(xhr, status, error);
+        }
+    });
 }
 
 //渲染modelServiceContainer部分的内容
