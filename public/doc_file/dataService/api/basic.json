@@ -1,6 +1,6 @@
 [
     {
-        "Name" : "Check Online Service Nodes",
+        "Name" : "Online Service Nodes",
         "URL":"/onlineNodes",
         "Method":"GET",
         "Description" : "Check online service nodes, which can provide available web service",
@@ -13,7 +13,7 @@
     },
     
     {
-        "Name" : "Check Service Node State",
+        "Name" : "Service Node State",
         "URL":"/state",
         "Method":"GET",
         "Headers":"Content-type:application/json",
@@ -31,11 +31,11 @@
         "Response":"chekc_service_state_rsp"
     },
     {
-        "Name" : "Check Available Services Of Node",
+        "Name" : "Available Services",
         "URL":"/onlineNodesAllPcs",
         "Method":"GET",
         "Headers":"Content-type:application/json",
-        "Description" : "Check service node state, which is online or offline",
+        "Description" : "Check availabel service in distributed nodes",
         "Params" : [
             {
                 "Name" : "token",
@@ -48,10 +48,62 @@
                 "Description" : "The service type of one specific service node, including information, visualization and data service, optional parameter: Processing, Visualization and Data"
             }
         ],
-        "Return" : "Check specific service node state including online and offline state.",
+        "Return" : "Available services on service node.",
         "ReturnType" : "JSON",
         "Request":"chekc_available_service_req",
         "Response":"chekc_available_service_rsp"
+    },
+    {
+        "Name" : "Capability",
+        "URL":"/capability",
+        "Method":"GET",
+        "Headers":"Content-type:application/json",
+        "Description" : "Check metadata description of various data services",
+        "Params" : [
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+            {
+                "Name" : "type",
+                "Type" : "String",
+                "Description" : "The service type of one specific service node, including information, visualization and data service, optional parameter: Processing, Visualization and Data"
+            },
+            {
+                "Name" : "id",
+                "Type" : "String",
+                "Description" : "Service id"
+            }
+        ],
+        "Return" : "Metadata description of specific service in distributed node.",
+        "ReturnType" : "JSON",
+        "Request":"capability_of_service_req",
+        "Response":"capability_of_service_rsp"
+    },
+    {
+        "Name" : "Test Data URLs",
+        "URL":"/files",
+        "Method":"GET",
+        "Description" : "Get test data urls of the service",
+        "Params" : [
+            {
+                "Name" : "token",
+                "Type" : "String",
+                "Description" : "The specific unique identifier of one specific service node"
+            },
+           
+            {
+                "Name" : "id",
+                "Type" : "String",
+                "Description" : "Service id"
+            }
+        ],
+        "Return" : "Test data URLs.",
+        "ReturnType" : "JSON",
+        "Request":"test_data_urls_req",
+        "Response":"test_data_urls_rsp"
     }
+
 
 ]
