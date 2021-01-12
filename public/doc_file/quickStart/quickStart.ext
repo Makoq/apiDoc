@@ -1,0 +1,170 @@
+!!mdl
+&lt;ModelClass name="createWordCloud" uid="3667daec-e545-4d00-9f05-6fcff7e16c85" type="SimpleCalculation"&gt;
+    &lt;!-- Description of the Model --&gt;
+    &lt;AttributeSet&gt;
+	    &lt;Categories&gt;
+			&lt;Category principle="server" path="server" /&gt;
+		&lt;/Categories&gt;
+		&lt;LocalAttributes&gt;
+			&lt;LocalAttribute local="ZH_CN" localName="createWordCloud" wiki=""&gt;
+				&lt;Keywords&gt;创建词云&lt;/Keywords&gt;
+				&lt;Abstract&gt;创建词云&lt;/Abstract&gt;
+			&lt;/LocalAttribute&gt;
+			&lt;LocalAttribute local="EN_US" localName="createWordCloud" wiki=""&gt;
+				&lt;Keywords&gt;create word colud&lt;/Keywords&gt;
+				&lt;Abstract&gt;create word colud&lt;/Abstract&gt;
+			&lt;/LocalAttribute&gt;
+		&lt;/LocalAttributes&gt;
+	&lt;/AttributeSet&gt;
+	&lt;!-- Execution Information of the Model --&gt;
+	&lt;Behavior&gt;
+	    &lt;!-- The structure of the udx file which contains the input or output parameters  --&gt;
+		&lt;RelatedDatasets&gt;
+			&lt;DatasetItem name="input" type="internal" description="input"&gt;
+				&lt;UdxDeclaration&gt;
+					&lt;UdxNode /&gt;
+				&lt;/UdxDeclaration&gt;
+			&lt;/DatasetItem&gt;
+			&lt;DatasetItem name="output" type="internal" description="output"&gt;
+				&lt;UdxDeclaration&gt;
+					&lt;UdxNode /&gt;
+				&lt;/UdxDeclaration&gt;
+			&lt;/DatasetItem&gt;
+		&lt;/RelatedDatasets&gt;
+		&lt;!-- Model Execution Steps --&gt;
+		&lt;StateGroup&gt;
+			&lt;States&gt;
+				&lt;!-- A model can have more than one step, so there can be multiple state tags --&gt;
+				&lt;!-- A state tag represents a step in the execution process of a model --&gt;
+				&lt;State id="349a82c8-7c63-443e-992f-eeff6defa9c2" name="run" type="basic" description="get input, run the program and output the result"&gt;
+				    &lt;!-- A state tag can contain more than one event tags --&gt;
+				    &lt;!-- The "type" attribute of event tag can only take two values: "response" indicates that user input is needed;
+					    "noreponse" represents output ( no user response is needed )  --&gt;
+					&lt;Event name="inputTextFile" type="response" description="the file used to create wordcloud" optional="False"&gt;
+					    &lt;!-- The "dataReference" attribute can connect ResponseParameter tag with DatasetItem tag --&gt;
+						&lt;ResponseParameter datasetReference="input" description="" /&gt;
+					&lt;/Event&gt;
+					&lt;Event name="inputLanguageFile" type="response" description="language in which the text file is written" optional="False"&gt;
+						&lt;ResponseParameter datasetReference="input" description="" /&gt;
+					&lt;/Event&gt;
+					&lt;Event name="outputResult" type="noresponse" description="output result" optional="False"&gt;
+						&lt;DispatchParameter datasetReference="output" description="" /&gt;
+					&lt;/Event&gt;
+				&lt;/State&gt;
+			&lt;/States&gt;
+			&lt;StateTransitions /&gt;
+		&lt;/StateGroup&gt;
+	&lt;/Behavior&gt;
+	&lt;!-- Runtime Information of the Model --&gt;
+	&lt;Runtime name="" version="1.0.0.0" baseDir="$(ModelServicePath)\model" entry="encapsulation.py"&gt;
+		&lt;HardwareConfigures&gt;
+			&lt;server key="cpu core numble" value="[2,infinite)" /&gt;
+			&lt;server key="memory size" value="[2GB,infinite)" /&gt;
+		&lt;/HardwareConfigures&gt;
+		&lt;SoftwareConfigures&gt;
+			&lt;server key="Operating System" platform="x64" value="win 6||win 7||win 8||win 8.1||win 10||win xp" /&gt;
+		&lt;/SoftwareConfigures&gt;
+		&lt;Assemblies /&gt;
+		&lt;SupportiveResources /&gt;
+	&lt;/Runtime&gt;
+&lt;/ModelClass&gt;
+
+!!program
+from modelservicecontext import EModelContextStatus
+from modelservicecontext import ERequestResponseDataFlag
+from modelservicecontext import ERequestResponseDataMIME
+from modelservicecontext import ModelServiceContext
+from modeldatahandler import ModelDataHandler
+import sys
+import os
+import shutil
+import linecache
+
+######################################################################################
+# Model program
+import re
+import jieba
+import wordcloud
+def createWC(language, filePath, imgPath, imgWidth=400, imgHeight=200, imgBgC="black"):
+    f = open(filePath, encoding="utf-8")
+    txt = f.read()
+    f.close()
+    rTxt = re.sub('[\{\}\[\]\"\":0-9_/-=&\? %,+\(\)]+', " ", txt)
+    rTxt = re.sub('\s+', " ", rTxt)
+    rStr = ""
+    if language == "Chinese":
+        ls = jieba.lcut(rTxt)
+        rStr = "".join(ls)
+    elif language == "English":
+        rStr = rTxt
+    else:
+        print("incorrect input")
+        return
+    w = wordcloud.WordCloud(font_path="msyh", width=imgWidth, height=imgHeight, background_color=imgBgC)
+    w.generate(rStr)
+    w.to_file(imgPath)
+# End
+##########################################################################################
+# Encapsulation program
+if len(sys.argv) < 3:
+	exit()
+
+ms = ModelServiceContext()
+ms.onInitialize(sys.argv[1], sys.argv[2], sys.argv[3])
+mdh = ModelDataHandler(ms)
+
+print(ms.getMappingLibraryDirectory())
+
+# Enter "run" state
+# Match the state tag whose name attribute value is "run" in the mdl file
+ms.onEnterState('run')
+
+# Fire "inputLanguageFile" event
+# Match the event tag whose name attribute value is "inputLanguageFile" in the mdl file
+ms.onFireEvent('inputLanguageFile')
+
+# Get user input, because the type attribute value of the event tag above is "response"  
+ms.onRequestData()
+
+if ms.getRequestDataFlag() == ERequestResponseDataFlag.ERDF_OK and ms.getRequestDataMIME() == ERequestResponseDataMIME.ERDM_RAW_FILE:
+		lang_file_path = ms.getRequestDataBody()	
+else:
+	ms.onFinalize()
+
+# Fire "inputTextFile" event
+# Match the event tag whose name attribute value is "inputTextFile" in the mdl file
+ms.onFireEvent('inputTextFile')
+
+# Get user input, because the type attribute value of the event tag above is "response"  
+ms.onRequestData()
+
+if ms.getRequestDataFlag() == ERequestResponseDataFlag.ERDF_OK and ms.getRequestDataMIME() == ERequestResponseDataMIME.ERDM_RAW_FILE:
+		file_path = ms.getRequestDataBody()	
+else:
+	ms.onFinalize()
+
+# Fire "outputResult" event
+ms.onFireEvent('outputResult')
+
+f = open(lang_file_path, "r")
+lang = f.read().replace('\n', "")
+f.close()
+
+instance_dir = os.path.normpath(ms.getModelInstanceDirectory())
+if not os.path.exists(instance_dir):
+    os.makedirs(instance_dir)
+result_path = os.path.normpath(instance_dir + "\\result.png") 
+createWC(lang, file_path, result_path)
+
+# Set format of the response data
+ms.setResponseDataFlag(ERequestResponseDataFlag.ERDF_OK)
+ms.setResponseDataMIME(ERequestResponseDataMIME.ERDM_RAW_FILE)
+ms.setResponseDataBody(result_path)
+
+# Returns data to the user, because the type attribute value of the "outputResult" event tag is "noresponse"
+ms.onResponseData()
+# Leave "run" state
+ms.onLeaveState()
+# If there are more "state" or "event" tags, keep writing here
+# End
+ms.onFinalize()

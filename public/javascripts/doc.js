@@ -90,12 +90,45 @@ ContentItem.prototype.renderErr = function(xhr, status, error){
 //渲染quickStart部分的内容
 contentItem.quickStart.render = function(){
     var _this = this;
+    // $.ajax({
+    //     "type": "get",
+    //     "url": BASE_URL + "doc_file/quickStart/quickStart.ejs",
+    //     "success": function(res){
+    //         _this.dom.html(res);
+    //         _this.show();
+    //     },
+    //     "error": function(xhr, status, error){
+    //         _this.renderErr(xhr, status, error);
+    //     }
+    // });
     $.ajax({
         "type": "get",
-        "url": BASE_URL + "doc_file/quickStart/quickStart.ejs",
-        "success": function(res){
-            _this.dom.html(res);
-            _this.show();
+        "url": BASE_URL + "doc_file/quickStart/quickStart.ext",
+        "success": function(extData){
+            $.ajax({
+                "type": "get",
+                "url": BASE_URL + "doc_file/quickStart/quickStart.json",
+                "success": function(res){
+                    var chunk = parseExtFile(extData);
+                    var arr = [];
+                    var mk = res.markdown;
+                    arr.push("<h1 class='caption'>" + res.caption + "</h1>")
+                    for(var i = 0; i < mk.length; i++){
+                        var content = mk[i].content;
+                        arr.push("<div class='markdown'>");
+                        arr.push("<h2 class='markdown-title'>" + (mk[i].title ? mk[i].title : "") + "</h2>");
+                        for(var j = 0; j < content.length; j++){
+                           arr.push(generateContent(content[j], chunk));
+                        }
+                        arr.push("</div>");
+                    }
+                    _this.dom.html(arr.join(""));
+                    _this.show();
+                },
+                "error": function(xhr, status, error){
+                    _this.renderErr(xhr, status, error);
+                }
+            })
         },
         "error": function(xhr, status, error){
             _this.renderErr(xhr, status, error);
@@ -108,7 +141,7 @@ contentItem.modelServiceContainer.render = function(){
     var _this = this;
     $.ajax({
         "type": "get",
-        "url": BASE_URL + "doc_file/serviceContainer/serviceContainer.ejs",
+        "url": BASE_URL + "doc_file/modelServiceContainer/modelServiceContainer.ejs",
         "success": function(res){
             _this.dom.html(res);
             _this.show();
@@ -243,7 +276,7 @@ function parseExtFile(stream){
     var chunk = {};
     var lines = stream.split("\r\n");
     for(var i = 0; i < lines.length; i++){
-        if(lines[i] == "" || lines[i].startsWith('#')){
+        if(lines[i] == ""){
             continue;
         }
         else if(lines[i].startsWith("!!")){
@@ -263,14 +296,18 @@ function parseExtFile(stream){
 
 // }
 
- 
-
-
-
-//渲染quickStart部分的内容
-contentItem.quickStart.render = function(){
-    this.dom.html("<h1 class='caption'>Sorry, this page is under development.</h1>");
-    this.show();
+//
+function generateContent(obj, ext){
+    if(obj.p){
+        return "<p>" + obj.p + "</p>";
+    }
+    if(obj.img){
+        return "<figure class='pictureBox'>" + "<img src='" + obj.img + "' alt='" + obj.alt + "'/>" + "<figcaption>" + (obj.caption ? obj.caption : "") + "</figcaption>" + "</figure>";
+    }
+    if(obj.pre){
+        return "<pre class='markdown-pre'><code>" + ext[obj.pre] + "</code></pre>";
+    }
+    return "";
 }
 
 //设置菜单位置

@@ -139,7 +139,7 @@
 .markdown-pre{
     padding:16px;
     margin:10px 0;
-    background-color:#f6f8fa;
+    background:#f6f8fa scroll;
 }
 .markdown-return{
     font-style: italic;
