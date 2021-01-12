@@ -275,6 +275,8 @@ function parseExtFile(stream){
     var name = "";
     var chunk = {};
     var lines = stream.split("\r\n");
+    var pro = "";
+    var str = "";
     for(var i = 0; i < lines.length; i++){
         if(lines[i] == ""){
             continue;
@@ -305,7 +307,7 @@ function generateContent(obj, ext){
         return "<figure class='pictureBox'>" + "<img src='" + obj.img + "' alt='" + obj.alt + "'/>" + "<figcaption>" + (obj.caption ? obj.caption : "") + "</figcaption>" + "</figure>";
     }
     if(obj.pre){
-        return "<pre class='markdown-pre'><code>" + ext[obj.pre] + "</code></pre>";
+        return "<pre class='markdown-pre'><code>" + hljs.highlight(obj.lang, ext[obj.pre]).value + "</code></pre>";
     }
     return "";
 }

@@ -9,13 +9,13 @@
                     "alt": "encapsulation process"
                 },
                 {
-                    "p": "a. Modelservicecontext, modeldatahandler can be found here. We provide implementations in c++, c#, java, JavaScript, and python language."
+                    "p": "a. Modelservicecontext, modeldatahandler can be found <a target=\"_blank\" href=\"./resources/sdk_python.zip\">here</a>. We provide implementations in C++, C#, Java, JavaScript, and Python language."
                 },
                 {
                     "p": "b. Model service container can be downloaded from download page."
                 },
                 {
-                    "p": "c. The model can be implemented in any programming language. The model encapsulation program can be implemented in one of c++, c#, java, JavaScript, and python language."
+                    "p": "c. The model can be implemented in any programming language. The model encapsulation program can be implemented in one of C++, C#, Java, JavaScript, and Python language."
                 }
             ]
         },
@@ -23,14 +23,14 @@
             "title": "Example",
             "content": [
                 {
-                    "p": "Let’s take a small python program (<a target=\"_blank\" href=\"./doc_file/quickStart/createWrodCloud.py\">createWordCloud</a>) as the example to show how encapsulate a model with our model service container. One of the major functions of the program is to generate a WordCloud according to the content of text file which can be wiritten in either English or Chinese. For example, to generate a WordCloud based on Hamlet, a famous novel by Shakespeare, the following codes could be entered in the command line:"
+                    "p": "Let’s take a small Python program (<a target=\"_blank\" href=\"./resources/createWordCloud.py\">createWordCloud</a>) as the example to show how encapsulate a model with our model service container. One of the major functions of the program is to generate a WordCloud according to the content of text file which can be wiritten in either English or Chinese. For example, to generate a WordCloud based on Hamlet, a famous novel by Shakespeare, the following codes could be entered in the command line:"
                 },
                 {
                     "img": "./images/quickStart/cmd1.png",
-                    "alt": "implement the python program"
+                    "alt": "implement the Python program"
                 },
                 {
-                    "p": "After executing the program, you can see a picture named hamlet.png in corresponding folder. The picture is a WordCloud picture generated based on the information in the hamlet.txt file that has been input. Next, we will encapsulate the program with python language."
+                    "p": "After executing the program, you can see a picture named hamlet.png in corresponding folder. The picture is a WordCloud picture generated based on the information in the hamlet.txt file that has been input. Next, we will encapsulate the program with Python language."
                 }
             ]
         },
@@ -74,20 +74,8 @@
                     "p": "Use .mdl as the suffix of model description file. Model description file, in the same format with xml file, contain certain tags used to describe the model. In the example, our model description file is as follows."
                 },
                 {
-                    "img": "./images/quickStart/mdl1.png",
-                    "alt": "mdl file"
-                },
-                {
-                    "img": "./images/quickStart/mdl2.png",
-                    "alt": "mdl file"
-                },
-                {
-                    "img": "./images/quickStart/mdl3.png",
-                    "alt": "mdl file"
-                },
-                {
-                    "img": "./images/quickStart/mdl4.png",
-                    "alt": "mdl file"
+                    "pre": "mdl",
+                    "lang": "XML"
                 },
                 {
                     "p": "Note:"
@@ -132,24 +120,8 @@
                     "p": "In the example, we create encapsulation.py in the model folder to save the codes of the encapsulation program (refer to the following figures for details), with \"event\" corresponding to the event tag in the mdl file."
                 },
                 {
-                    "img": "./images/quickStart/program1.png",
-                    "alt": "encapsulation program"
-                },
-                {
-                    "img": "./images/quickStart/program2.png",
-                    "alt": "encapsulation program"
-                },
-                {
-                    "img": "./images/quickStart/program3.png",
-                    "alt": "encapsulation program"
-                },
-                {
-                    "img": "./images/quickStart/program4.png",
-                    "alt": "encapsulation program"
-                },
-                {
-                    "img": "./images/quickStart/program5.png",
-                    "alt": "encapsulation program"
+                    "pre": "program",
+                    "lang": "Python"
                 }
             ]
         },
@@ -192,7 +164,7 @@
             "title": "",
             "content": [
                 {
-                    "p": "The above model program, encapsulation program, and input files can all be downloaded <a targe=\"blank\" href=\".doc_file\\quickStart\\createWordCloud.zip\">here.</a> You can find them in the model and testify floder."
+                    "p": "The above model program, encapsulation program, and input files can all be downloaded <a targe=\"_blank\" href=\"./resources/createWordCloud.zip\">here.</a> You can find them in the model and testify floder."
                 }
             ]
         }

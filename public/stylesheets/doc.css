@@ -137,9 +137,12 @@
     color:#aaa;
 }
 .markdown-pre{
+    box-sizing:border-box;
+    width:100%;
     padding:16px;
     margin:10px 0;
     background:#f6f8fa scroll;
+    overflow:auto;
 }
 .markdown-return{
     font-style: italic;

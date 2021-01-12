@@ -1,73 +1,73 @@
 !!mdl
-&lt;ModelClass name="createWordCloud" uid="3667daec-e545-4d00-9f05-6fcff7e16c85" type="SimpleCalculation"&gt;
-    &lt;!-- Description of the Model --&gt;
-    &lt;AttributeSet&gt;
-	    &lt;Categories&gt;
-			&lt;Category principle="server" path="server" /&gt;
-		&lt;/Categories&gt;
-		&lt;LocalAttributes&gt;
-			&lt;LocalAttribute local="ZH_CN" localName="createWordCloud" wiki=""&gt;
-				&lt;Keywords&gt;创建词云&lt;/Keywords&gt;
-				&lt;Abstract&gt;创建词云&lt;/Abstract&gt;
-			&lt;/LocalAttribute&gt;
-			&lt;LocalAttribute local="EN_US" localName="createWordCloud" wiki=""&gt;
-				&lt;Keywords&gt;create word colud&lt;/Keywords&gt;
-				&lt;Abstract&gt;create word colud&lt;/Abstract&gt;
-			&lt;/LocalAttribute&gt;
-		&lt;/LocalAttributes&gt;
-	&lt;/AttributeSet&gt;
-	&lt;!-- Execution Information of the Model --&gt;
-	&lt;Behavior&gt;
-	    &lt;!-- The structure of the udx file which contains the input or output parameters  --&gt;
-		&lt;RelatedDatasets&gt;
-			&lt;DatasetItem name="input" type="internal" description="input"&gt;
-				&lt;UdxDeclaration&gt;
-					&lt;UdxNode /&gt;
-				&lt;/UdxDeclaration&gt;
-			&lt;/DatasetItem&gt;
-			&lt;DatasetItem name="output" type="internal" description="output"&gt;
-				&lt;UdxDeclaration&gt;
-					&lt;UdxNode /&gt;
-				&lt;/UdxDeclaration&gt;
-			&lt;/DatasetItem&gt;
-		&lt;/RelatedDatasets&gt;
-		&lt;!-- Model Execution Steps --&gt;
-		&lt;StateGroup&gt;
-			&lt;States&gt;
-				&lt;!-- A model can have more than one step, so there can be multiple state tags --&gt;
-				&lt;!-- A state tag represents a step in the execution process of a model --&gt;
-				&lt;State id="349a82c8-7c63-443e-992f-eeff6defa9c2" name="run" type="basic" description="get input, run the program and output the result"&gt;
-				    &lt;!-- A state tag can contain more than one event tags --&gt;
-				    &lt;!-- The "type" attribute of event tag can only take two values: "response" indicates that user input is needed;
-					    "noreponse" represents output ( no user response is needed )  --&gt;
-					&lt;Event name="inputTextFile" type="response" description="the file used to create wordcloud" optional="False"&gt;
-					    &lt;!-- The "dataReference" attribute can connect ResponseParameter tag with DatasetItem tag --&gt;
-						&lt;ResponseParameter datasetReference="input" description="" /&gt;
-					&lt;/Event&gt;
-					&lt;Event name="inputLanguageFile" type="response" description="language in which the text file is written" optional="False"&gt;
-						&lt;ResponseParameter datasetReference="input" description="" /&gt;
-					&lt;/Event&gt;
-					&lt;Event name="outputResult" type="noresponse" description="output result" optional="False"&gt;
-						&lt;DispatchParameter datasetReference="output" description="" /&gt;
-					&lt;/Event&gt;
-				&lt;/State&gt;
-			&lt;/States&gt;
-			&lt;StateTransitions /&gt;
-		&lt;/StateGroup&gt;
-	&lt;/Behavior&gt;
-	&lt;!-- Runtime Information of the Model --&gt;
-	&lt;Runtime name="" version="1.0.0.0" baseDir="$(ModelServicePath)\model" entry="encapsulation.py"&gt;
-		&lt;HardwareConfigures&gt;
-			&lt;server key="cpu core numble" value="[2,infinite)" /&gt;
-			&lt;server key="memory size" value="[2GB,infinite)" /&gt;
-		&lt;/HardwareConfigures&gt;
-		&lt;SoftwareConfigures&gt;
-			&lt;server key="Operating System" platform="x64" value="win 6||win 7||win 8||win 8.1||win 10||win xp" /&gt;
-		&lt;/SoftwareConfigures&gt;
-		&lt;Assemblies /&gt;
-		&lt;SupportiveResources /&gt;
-	&lt;/Runtime&gt;
-&lt;/ModelClass&gt;
+<ModelClass name="createWordCloud" uid="3667daec-e545-4d00-9f05-6fcff7e16c85" type="SimpleCalculation">
+    <!-- Description of the Model -->
+    <AttributeSet>
+	    <Categories>
+			<Category principle="server" path="server" />
+		</Categories>
+		<LocalAttributes>
+			<LocalAttribute local="ZH_CN" localName="createWordCloud" wiki="">
+				<Keywords>创建词云</Keywords>
+				<Abstract>创建词云</Abstract>
+			</LocalAttribute>
+			<LocalAttribute local="EN_US" localName="createWordCloud" wiki="">
+				<Keywords>create word colud</Keywords>
+				<Abstract>create word colud</Abstract>
+			</LocalAttribute>
+		</LocalAttributes>
+	</AttributeSet>
+	<!-- Execution Information of the Model -->
+	<Behavior>
+	    <!-- The structure of the udx file which contains the input or output parameters  -->
+		<RelatedDatasets>
+			<DatasetItem name="input" type="internal" description="input">
+				<UdxDeclaration>
+					<UdxNode />
+				</UdxDeclaration>
+			</DatasetItem>
+			<DatasetItem name="output" type="internal" description="output">
+				<UdxDeclaration>
+					<UdxNode />
+				</UdxDeclaration>
+			</DatasetItem>
+		</RelatedDatasets>
+		<!-- Model Execution Steps -->
+		<StateGroup>
+			<States>
+				<!-- A model can have more than one step, so there can be multiple state tags -->
+				<!-- A state tag represents a step in the execution process of a model -->
+				<State id="349a82c8-7c63-443e-992f-eeff6defa9c2" name="run" type="basic" description="get input, run the program and output the result">
+				    <!-- A state tag can contain more than one event tags -->
+				    <!-- The "type" attribute of event tag can only take two values: "response" indicates that user input is needed;
+					    "noreponse" represents output ( no user response is needed )  -->
+					<Event name="inputTextFile" type="response" description="the file used to create wordcloud" optional="False">
+					    <!-- The "dataReference" attribute can connect ResponseParameter tag with DatasetItem tag -->
+						<ResponseParameter datasetReference="input" description="" />
+					</Event>
+					<Event name="inputLanguageFile" type="response" description="language in which the text file is written" optional="False">
+						<ResponseParameter datasetReference="input" description="" />
+					</Event>
+					<Event name="outputResult" type="noresponse" description="output result" optional="False">
+						<DispatchParameter datasetReference="output" description="" />
+					</Event>
+				</State>
+			</States>
+			<StateTransitions />
+		</StateGroup>
+	</Behavior>
+	<!-- Runtime Information of the Model -->
+	<Runtime name="" version="1.0.0.0" baseDir="$(ModelServicePath)\model" entry="encapsulation.py">
+		<HardwareConfigures>
+			<server key="cpu core numble" value="[2,infinite)" />
+			<server key="memory size" value="[2GB,infinite)" />
+		</HardwareConfigures>
+		<SoftwareConfigures>
+			<server key="Operating System" platform="x64" value="win 6||win 7||win 8||win 8.1||win 10||win xp" />
+		</SoftwareConfigures>
+		<Assemblies />
+		<SupportiveResources />
+	</Runtime>
+</ModelClass>
 
 !!program
 from modelservicecontext import EModelContextStatus
