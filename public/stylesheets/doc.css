@@ -62,7 +62,7 @@
     line-height:32px;
 }
 .menu-ul-item{
-    padding-left:32px;
+    padding-left:16px; /*32px*/
     margin:4px 0;
     cursor:pointer;
     color:rgba(0,0,0,.85);

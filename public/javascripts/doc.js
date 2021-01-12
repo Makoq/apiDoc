@@ -13,7 +13,8 @@ $(init);
 function init(){
     bind();
     //页面加载完毕后，默认选中第一个二级菜单项
-    $("#js-menu > ul").first().children(".menu-ul-item").first().click();
+    //$("#js-menu > ul").first().children(".menu-ul-item").first().click();
+    $("#js-menu > p").first().click();
 }
 
 function bind(){
@@ -90,17 +91,6 @@ ContentItem.prototype.renderErr = function(xhr, status, error){
 //渲染quickStart部分的内容
 contentItem.quickStart.render = function(){
     var _this = this;
-    // $.ajax({
-    //     "type": "get",
-    //     "url": BASE_URL + "doc_file/quickStart/quickStart.ejs",
-    //     "success": function(res){
-    //         _this.dom.html(res);
-    //         _this.show();
-    //     },
-    //     "error": function(xhr, status, error){
-    //         _this.renderErr(xhr, status, error);
-    //     }
-    // });
     $.ajax({
         "type": "get",
         "url": BASE_URL + "doc_file/quickStart/quickStart.ext",
@@ -151,7 +141,6 @@ contentItem.modelServiceContainer.render = function(){
         }
     });
 }
-
 
 //渲染dataServiceContainer部分的内容
 contentItem.dataServiceContainer.render = function(){

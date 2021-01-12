@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./lib/highlight/styles/default.css" />
     <link rel="stylesheet" href="./stylesheets/common.css" />
     <link rel="stylesheet" href="./stylesheets/doc.css" />
-
 </head>
 <body>
     <div class="container" id="js-container">
@@ -16,89 +15,33 @@
         <!--主内容-->
         <div class="main">
             <div class="main-menu" id="js-menu">
-                <p data-category="quickStart" class="main-menu-p-noSub">Quick Start</p>
-                <p data-category="modelServiceContainer" class="main-menu-p-noSub">Model Service Container</p>
-                <p data-category="api" class="main-menu-p selected on">Model Service Api</p>
-                <ul class="main-menu-ul" style="display:block">
-                    <% menuObj["Model Service Api"].forEach(function(t){ %>
-                        <li class="menu-ul-type"><%= t.typeName %></li>
-                        <% t.subTypes.forEach(function(st){ %>
-                            <li class="menu-ul-item" data-file="<%= st.file %>" data-ext="<%= st.ext %>" data-fullTitle="<%= t.fullTypeName + ' / ' + st.typeName %>"><%= st.typeName %></li>
-                        <%})%>
-                    <%}) %>
-                    <!-- <li class="menu-ul-type">MDL</p>
-                    <li class="menu-ul-item">modelClass</li>
-                    <li class="menu-ul-item">modelBehavior</li> -->
-                </ul>
-                <p data-category="dataServiceContainer" class="main-menu-p-noSub">Data Service Container</p>
-                <p data-category="api" class="main-menu-p selected on">Data Service Api</p>
-                <ul class="main-menu-ul" style="display:block">
-                    <% menuObj["Data Service Api"].forEach(function(t){ %>
-                        <li class="menu-ul-type"><%= t.typeName %></li>
-                        <% t.subTypes.forEach(function(st){ %>
-                            <li class="menu-ul-item" data-file="<%= st.file %>" data-ext="<%= st.ext %>" data-fullTitle="<%= t.fullTypeName + ' / ' + st.typeName %>"><%= st.typeName %></li>
-                        <%})%>
-                    <%}) %>
-                </ul>
-                <!-- <p data-category="examples" class="main-menu-p">Examples</p>
-                <ul class="main-menu-ul">
-                    <li data-type="FDS" class="menu-ul-item">FDS</li>
-                    <li data-type="Random Forest" class="menu-ul-item">Random Forest</li>
-                </ul> -->
+                <% Object.keys(menu).forEach(function(t){ %>
+                    <p data-category="<%= menu[t].category %>" class="<%= menu[t].subTypes ? 'main-menu-p' : 'main-menu-p-noSub' %>"><%= menu[t].title %></p>
+                    <% if(menu[t].subTypes){ %>
+                        <ul class="main-menu-ul">
+                            <% menu[t].subTypes.forEach(function(st){ %>
+                                <li class="menu-ul-item" data-file="<%= st.file %>" data-ext="<%= st.ext %>" data-fullTitle="<%= menu[t].fullTitle + ' / ' + st.title %>"><%= st.title %></li>
+                            <% }) %>
+                        </ul>
+                    <% } %>
+                <% }) %>
             </div>
             <div class="main-content">
                 <!--加载中-->
                 <div id="js-loading" class="content-item" style="text-align:center">
                     <img src="./images/loading1.png" class="rotate" />
                 </div>
-                <!--API Instruction-->
-                <div id="js-api" class="content-item">
-                    
-                </div>
-                <!--examples-->
-                <div id="js-examples" class="content-item">
-                    <h1 class="markdown-title">FDS</h1>
-                    <div class="markdown">
-                        <p>Fire Dynamics Simulator (FDS) is a computational fluid dynamics (CFD) model of fire-driven fluid flow. The software solves numerically a form of the Navier-Stokes equations appropriate for low-speed, thermally-driven flow, with an emphasis on smoke and heat transport from fires.</p>
-                        <pre class="markdown-pre" id="js-pre">                        
-                        </pre>
-                    </div>
-                </div>
-                <!-- service container -->
-                <div id="js-serviceContainer" class="content-item" >
-                </div>
-                <!-- data service container -->
-                <div id="js-dataServiceContainer" class="content-item" ></div>
                 <!--quick start-->
                 <div id="js-quickStart" class="content-item">
-                    <h1 class="markdown-title">Quick Start</h1>
-                    <p>This primer shows how to run a simple model.</p>
-                    <div class="markdown">
-                        <h2 class="markdown-h2">Step1:</h2>
-                        <p>Below you'll find a complete working example. Create a new file, copy in the contents below, and open in a browser:</p>
-                        <pre class="markdown-pre">
-                            
-                        </pre>
-                    </div>
-                    <div class="markdown">
-                        <h2 class="markdown-h2">Step2:</h2>
-                        <p>Below you'll find a complete working example. Create a new file, copy in the contents below, and open in a browser:</p>
-                        <pre class="markdown-pre">
-                            
-                        </pre>
-                    </div>
                 </div>
                 <!--model service container -->
                 <div id="js-modelServiceContainer" class="content-item" >
-
                 </div>
                 <!--data service container-->
                 <div id="js-dataServiceContainer" class="content-item">
-
                 </div>
                 <!--API Instruction-->
                 <div id="js-api" class="content-item">
-                    
                 </div>
                 <!--examples-->
                 <!-- <div id="js-examples" class="content-item">
@@ -118,7 +61,4 @@
 <script src="./javascripts/jquery.min.js"></script>
 <script src="./lib/highlight/highlight.pack.js"></script>
 <script src="./javascripts/doc.js"></script>
-<script>
-    // hljs.initHighlightingOnLoad();
-</script>
 </html>

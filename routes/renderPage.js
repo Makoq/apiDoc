@@ -28,7 +28,7 @@ function renderDoc(pageName){
                 next(err);
                 return;
             }
-            res.render(pageName, { "pageName": pageName, "menuObj": JSON.parse(data) });
+            res.render(pageName, { "pageName": pageName, "menu": JSON.parse(data) });
         })
     };
 }
