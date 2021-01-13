@@ -290,7 +290,7 @@ function parseExtFile(stream){
 //
 function generateContent(obj, ext){
     if(obj.p){
-        return "<p>" + obj.p + "</p>";
+        return "<p>" + obj.p.join("<br />") + "</p>";
     }
     if(obj.img){
         return "<figure class='pictureBox'>" + "<img src='" + obj.img + "' alt='" + obj.alt + "'/>" + "<figcaption>" + (obj.caption ? obj.caption : "") + "</figcaption>" + "</figure>";

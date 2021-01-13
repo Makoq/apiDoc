@@ -9,7 +9,7 @@
                 "Description" : "the Runtime in MDL"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -22,24 +22,24 @@
                 "Description" : "the Runtime in MDL"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
         "Name" : "getName()",
-        "Description" : "Get the name of runtime",
+        "Description" : "Get the name of the model in current version",
         "Params" : [],
-        "Return" : "the name of runtime",
+        "Return" : "the the model name in current version",
         "ReturnType" : "string"
     },
 	{
         "Name" : "setName(string pName)",
-        "Description" : "Set the name of runtime",
+        "Description" : "Set the model name in current version",
         "Params" : [
             {
                 "Name" : "pName",
                 "Type" : "string",
-                "Description" : "the name of runtime"
+                "Description" : "the model name"
             }
         ],
         "Return" : "no return",
@@ -47,19 +47,19 @@
     },
 	{
         "Name" : "getVersion()",
-        "Description" : "Get the version of runtime",
+        "Description" : "Get the version number",
         "Params" : [],
-        "Return" : "the version of runtime",
+        "Return" : "the version number",
         "ReturnType" : "string"
     },
 	{
         "Name" : "setVersion(string pVersion)",
-        "Description" : "Set the version of runtime",
+        "Description" : "Set the version number",
         "Params" : [
             {
                 "Name" : "pVersion",
                 "Type" : "string",
-                "Description" : "the version of runtime"
+                "Description" : "the version number"
             }
         ],
         "Return" : "no return",
@@ -67,19 +67,19 @@
     },
 	{
         "Name" : "getEntry()",
-        "Description" : "Get the entry of runtime",
+        "Description" : "Get the entry file contents of a model",
         "Params" : [],
-        "Return" : "the entry of runtime",
+        "Return" : "entry file contents",
         "ReturnType" : "string"
     },
 	{
         "Name" : "setEntry(string pEntry)",
-        "Description" : "Set the entry of runtime",
+        "Description" : "Set entry file contents of a model",
         "Params" : [
             {
                 "Name" : "pEntry",
                 "Type" : "string",
-                "Description" : "the entry of runtime"
+                "Description" : "entry file contents"
             }
         ],
         "Return" : "no return",
@@ -87,19 +87,19 @@
     },
 	{
         "Name" : "getBaseDirectory()",
-        "Description" : "Get the base directory of runtime",
+        "Description" : "Get the base directory of a model",
         "Params" : [],
-        "Return" : "the base directory of runtime",
+        "Return" : "the base directory of a model",
         "ReturnType" : "string"
     },
 	{
         "Name" : "setBaseDirectory(string pDirectory)",
-        "Description" : "Set the base directory of runtime",
+        "Description" : "Set the base directory of a model",
         "Params" : [
             {
                 "Name" : "pDirectory",
                 "Type" : "string",
-                "Description" : "the base directory of runtime"
+                "Description" : "the base directory of a model"
             }
         ],
         "Return" : "no return",
@@ -115,7 +115,7 @@
                 "Description" : "the hardware requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -128,7 +128,7 @@
                 "Description" : "the software requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -141,7 +141,7 @@
                 "Description" : "the model assembly requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -154,7 +154,7 @@
                 "Description" : "the supportive resource requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -200,7 +200,7 @@
                 "Description" : "the return of hardware requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -218,7 +218,7 @@
                 "Description" : "the return of software requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -236,7 +236,7 @@
                 "Description" : "the return of model assembly"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -254,7 +254,7 @@
                 "Description" : "the return of supportive resource"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -267,7 +267,7 @@
                 "Description" : "the hardware requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -280,7 +280,7 @@
                 "Description" : "the software requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -293,7 +293,7 @@
                 "Description" : "the model assembly"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -306,7 +306,7 @@
                 "Description" : "the supportive resource"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -319,7 +319,7 @@
                 "Description" : "the index of hardware requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -332,7 +332,7 @@
                 "Description" : "the index of software requirement"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -345,7 +345,7 @@
                 "Description" : "the index of model assembly"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -358,7 +358,7 @@
                 "Description" : "the index of supportive resource"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -381,7 +381,7 @@
                 "Description" : ""
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     }
 ]

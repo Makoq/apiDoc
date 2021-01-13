@@ -9,21 +9,20 @@
                 "Description" : "the Behavior in MDL"
             }
         ],
-        "Return" : "True or False",
-        "ReturnType" : "bool",
-        "Example": "loadFromXml"
+        "Return" : "true or false",
+        "ReturnType" : "bool"
     },
 	{
         "Name" : "formatToXml(XmlElement pModelClassElement)",
-        "Description" : "Format Behavior to XmlElement",
+        "Description" : "Convert behavior to XmlElement",
         "Params" : [
             {
                 "Name" : "pModelClassElement",
                 "Type" : "XmlElement",
-                "Description" : "the Behavior in MDL"
+                "Description" : "the behavior in MDL"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -36,7 +35,7 @@
                 "Description" : "the Dataset to add"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -49,7 +48,7 @@
                 "Description" : "the Dataset to remove"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -74,7 +73,7 @@
                 "Description" : "the return of dataset item"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -92,7 +91,7 @@
                 "Description" : "the return of dataset item"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -110,7 +109,7 @@
                 "Description" : "the dataset item to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -123,7 +122,7 @@
                 "Description" : "the model state to add"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -136,7 +135,7 @@
                 "Description" : "the model state to remove"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -161,7 +160,7 @@
                 "Description" : "the return of model state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -179,7 +178,7 @@
                 "Description" : "the return of model state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -197,7 +196,7 @@
                 "Description" : "the model state to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -215,7 +214,7 @@
                 "Description" : "the model state to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -233,7 +232,7 @@
                 "Description" : "the id of destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -251,7 +250,7 @@
                 "Description" : "the destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -269,7 +268,7 @@
                 "Description" : "the id of destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -287,7 +286,7 @@
                 "Description" : "the destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -317,7 +316,7 @@
                 "Description" : "the destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -335,7 +334,7 @@
                 "Description" : ""
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -353,7 +352,7 @@
                 "Description" : "the id of destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -371,7 +370,7 @@
                 "Description" : "the destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -394,7 +393,7 @@
                 "Description" : "the id of destination state"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -417,7 +416,7 @@
                 "Description" : ""
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     }
 ]

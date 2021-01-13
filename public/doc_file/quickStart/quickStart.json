@@ -9,13 +9,11 @@
                     "alt": "encapsulation process"
                 },
                 {
-                    "p": "a. Modelservicecontext, modeldatahandler can be found <a target=\"_blank\" href=\"./resources/sdk_python.zip\">here</a>. We provide implementations in C++, C#, Java, JavaScript, and Python language."
-                },
-                {
-                    "p": "b. Model service container can be downloaded from download page."
-                },
-                {
-                    "p": "c. The model can be implemented in any programming language. The model encapsulation program can be implemented in one of C++, C#, Java, JavaScript, and Python language."
+                    "p": [
+                        "a. Modelservicecontext, modeldatahandler can be found <a target=\"_blank\" href=\"./resources/sdk_python.zip\">here</a>. We provide implementations in C++, C#, Java, JavaScript, and Python language.",
+                        "b. Model service container can be downloaded from download page.",
+                        "c. The model can be implemented in any programming language. The model encapsulation program can be implemented in one of C++, C#, Java, JavaScript, and Python language." 
+                    ]
                 }
             ]
         },
@@ -23,14 +21,18 @@
             "title": "Example",
             "content": [
                 {
-                    "p": "Let’s take a small Python program (<a target=\"_blank\" href=\"./resources/createWordCloud.py\">createWordCloud</a>) as the example to show how encapsulate a model with our model service container. One of the major functions of the program is to generate a WordCloud according to the content of text file which can be wiritten in either English or Chinese. For example, to generate a WordCloud based on Hamlet, a famous novel by Shakespeare, the following codes could be entered in the command line:"
+                    "p": [
+                        "Let’s take a small Python program (<a target=\"_blank\" href=\"./resources/createWordCloud.py\">createWordCloud</a>) as the example to show how encapsulate a model with our model service container. One of the major functions of the program is to generate a WordCloud according to the content of text file which can be wiritten in either English or Chinese. For example, to generate a WordCloud based on Hamlet, a famous novel by Shakespeare, the following codes could be entered in the command line:"
+                    ]
                 },
                 {
                     "img": "./images/quickStart/cmd1.png",
                     "alt": "implement the Python program"
                 },
                 {
-                    "p": "After executing the program, you can see a picture named hamlet.png in corresponding folder. The picture is a WordCloud picture generated based on the information in the hamlet.txt file that has been input. Next, we will encapsulate the program with Python language."
+                    "p": [
+                        "After executing the program, you can see a picture named hamlet.png in corresponding folder. The picture is a WordCloud picture generated based on the information in the hamlet.txt file that has been input. Next, we will encapsulate the program with Python language."
+                    ]
                 }
             ]
         },
@@ -38,32 +40,28 @@
             "title": "Step1 Preparation",
             "content": [
                 {
-                    "p": "Create a new folder as the final deployment package. The folder structure of the deployment package is as shown in the following figure (note: there should not be any redundant file and folders)."
+                    "p": [
+                        "Create a new folder as the final deployment package. The folder structure of the deployment package is as shown in the following figure (note: there should not be any redundant file and folders)."
+                    ]
                 },
                 {
                     "img": "./images/quickStart/dir.png",
                     "alt": "directory"
                 },
                 {
-                    "p": "The function of each folder is as follows:"
+                    "p": [
+                        "The function of each folder is as follows:",
+                        "1. Dependent libraries are stored in the assembly folder;",
+                        "2. Model program, encapsulation program, mdl file, etc. are stored in the model folder;",
+                        "3. Software installation packages supporting the operation of the model are stored in the supportive folder;",
+                        "4. Test data is stored in the testify folder."
+                    ]
                 },
                 {
-                    "p": "1. Dependent libraries are stored in the assembly folder;"
+                    "p": ["After creating the folders, store the model program in the model folder."]
                 },
                 {
-                    "p": "2. Model program, encapsulation program, mdl file, etc. are stored in the model folder;"
-                },
-                {
-                    "p": "3. Software installation packages supporting the operation of the model are stored in the supportive folder;"
-                },
-                {
-                    "p": "4. Test data is stored in the testify folder."
-                },
-                {
-                    "p": "After creating the folders, store the model program in the model folder."
-                },
-                {
-                    "p": "In the example, we put createWordCloud.py into the model folder."
+                    "p": ["In the example, we put createWordCloud.py into the model folder."]
                 }
             ]
         },
@@ -71,29 +69,23 @@
             "title": "Step2 Write Model Description File",
             "content": [
                 {
-                    "p": "Use .mdl as the suffix of model description file. Model description file, in the same format with xml file, contain certain tags used to describe the model. In the example, our model description file is as follows."
+                    "p": [
+                        "Use .mdl as the suffix of model description file. Model description file, in the same format with xml file, contain certain tags used to describe the model. In the example, our model description file is as follows."
+                    ]
                 },
                 {
                     "pre": "mdl",
                     "lang": "XML"
                 },
                 {
-                    "p": "Note:"
-                },
-                {
-                    "p": "1．mdl file cannot contain comments. Comments are included here to offer explanation, and should be deleted in real operation;"
-                },
-                {
-                    "p": "2．When writing mdl file, model execution information (i.e. content of behavior tag) should be highlighted."
-                },
-                {
-                    "p": "3．Content of the RelatedDatasets tag under the Behavior tag describes the format of the UDX file that have been input and output. The input and output of the model are generally stored in UDX file, but you can also choose not to store them in UDX file. If you choose not to use UDX file, the content of RelatedDatasets could be ignored."
-                },
-                {
-                    "p": "4．The content of the StateGroup and States tag under the Behavior tag describes detailed execution steps of the model. The execution steps of the model are reflected by the state tag and the event tag under the state tag. A state represents a complete execution step, including output, output, warning, etc. The function of the event tag is to explain details about state, e.g. input, output, and warning;"
-                },
-                {
-                    "p": "5．When the encapsulated model usually input parameters and output results in the form of file in real execution. The format of the file could be UDX, txt or csv, etc. Input parameters of the model should be saved in file and transmitted to the model program after being read by the model encapsulation program. The execution result of the model would also be written into file by model encapsulation program and then returned to model users."
+                    "p": [
+                        "Note:",
+                        "1．mdl file cannot contain comments. Comments are included here to offer explanation, and should be deleted in real operation;",
+                        "2．When writing mdl file, model execution information (i.e. content of behavior tag) should be highlighted.",
+                        "3．Content of the RelatedDatasets tag under the Behavior tag describes the format of the UDX file that have been input and output. The input and output of the model are generally stored in UDX file, but you can also choose not to store them in UDX file. If you choose not to use UDX file, the content of RelatedDatasets could be ignored.",
+                        "4．The content of the StateGroup and States tag under the Behavior tag describes detailed execution steps of the model. The execution steps of the model are reflected by the state tag and the event tag under the state tag. A state represents a complete execution step, including output, output, warning, etc. The function of the event tag is to explain details about state, e.g. input, output, and warning;",
+                        "5．When the encapsulated model usually input parameters and output results in the form of file in real execution. The format of the file could be UDX, txt or csv, etc. Input parameters of the model should be saved in file and transmitted to the model program after being read by the model encapsulation program. The execution result of the model would also be written into file by model encapsulation program and then returned to model users."
+                    ]
                 }
             ]
         },
@@ -101,23 +93,23 @@
             "title": "Step3 Write Encapsulation Program",
             "content": [
                 {
-                    "p": "The encapsulation program is a layer of \"middleware\" between the model service container and the model program, which is shown as follows:"
+                    "p": [
+                        "The encapsulation program is a layer of \"middleware\" between the model service container and the model program, which is shown as follows:"
+                    ]
                 },
                 {
                     "img": "./images/quickStart/structure.png",
                     "alt": "structure diagram"
                 },
                 {
-                    "p": "The encapsulation program can \"shield\" the differences different model programs have in invoking methods, so as to ensure that the model service container or other programs that need to use the model can invoke the model in a standardized manner."
+                    "p": [
+                        "The encapsulation program can \"shield\" the differences different model programs have in invoking methods, so as to ensure that the model service container or other programs that need to use the model can invoke the model in a standardized manner.Therefore, the major functions of the encapsulation program include: 1. Interact with the model service container; 2. Invoke the model program.The encapsulation program should be written according to mdl file. The model program should be run step by step according to the state information (state tag) in mdl file."
+                    ]
                 },
                 {
-                    "p": "Therefore, the major functions of the encapsulation program include: 1. Interact with the model service container; 2. Invoke the model program."
-                },
-                {
-                    "p": "The encapsulation program should be written according to mdl file. The model program should be run step by step according to the state information (state tag) in mdl file."
-                },
-                {
-                    "p": "In the example, we create encapsulation.py in the model folder to save the codes of the encapsulation program (refer to the following figures for details), with \"event\" corresponding to the event tag in the mdl file."
+                    "p": [
+                        "In the example, we create encapsulation.py in the model folder to save the codes of the encapsulation program (refer to the following figures for details), with \"event\" corresponding to the event tag in the mdl file.Contents of encapsulation.py are as follows."
+                    ]
                 },
                 {
                     "pre": "program",
@@ -129,20 +121,18 @@
             "title": "Step4 Test Run of Encapsulation Program",
             "content": [
                 {
-                    "p": "1. Run ModelServiceContainer program and click start to activate Database and Service Container. After Database and Service Container are enabled successfully, click operation on the upper left corner and select MS Debugger."
-                },
-                {
-                    "p": "2. In the Model Service Debugger window, click select to select the model description file (.mdl) written in step 2. If there are input parameters, double click the cell under the Data column in the table below and select the file where the input parameters are saved. At last, click Start Debugging. In the example, we select hamlet.txt and lang.txt as the input files."
-                },
-                {
-                    "p": "3. Run the encapsulation program with the help of the command line or an editor. If the previous steps are configured correctly, the encapsulation program will automatically read the input parameters, execute the model program, and write the results of model run into the selected files. It should be noted that when running the model encapsulation program, the Host, Port, and InstanceID on the right side of the Model Service Debugger window should be transmitted to the encapsulation program as parameters. In the example, we run the encapsulation program directly with the help of the command line. The codes are shown as follows:"
+                    "p": [
+                        "1. Run ModelServiceContainer program and click start to activate Database and Service Container. After Database and Service Container are enabled successfully, click operation on the upper left corner and select MS Debugger.",
+                        "2. In the Model Service Debugger window, click select to select the model description file (.mdl) written in step 2. If there are input parameters, double click the cell under the Data column in the table below and select the file where the input parameters are saved. At last, click Start Debugging. In the example, we select hamlet.txt and lang.txt as the input files.",
+                        "3. Run the encapsulation program with the help of the command line or an editor. If the previous steps are configured correctly, the encapsulation program will automatically read the input parameters, execute the model program, and write the results of model run into the selected files. It should be noted that when running the model encapsulation program, the Host, Port, and InstanceID on the right side of the Model Service Debugger window should be transmitted to the encapsulation program as parameters. In the example, we run the encapsulation program directly with the help of the command line. The codes are shown as follows:"
+                    ]
                 },
                 {
                     "img": "./images/quickStart/cmd2.png",
                     "alt": "implement encapsulation program"
                 },
                 {
-                    "p": "If the test run succeeds, a picture named hamlet.png could be found in corresponding folder."
+                    "p": ["If the test run succeeds, a picture named hamlet.png could be found in corresponding folder."]
                 }
             ]
         },
@@ -150,13 +140,11 @@
             "title": "Step5 Deployment",
             "content": [
                 {
-                    "p": "1.Directly select the four folders and the license file in step one; click compress to generate a compressed package (i.e. the deployment package). Note: The format of the compressed package must be zip, and there should not be any subdirectories in the compressed package."
-                },
-                {
-                    "p": "2.Click the Management page in the model service container to open the management page; select deployment under Local Services in the left navigation bar; select the compressed package generated and submit it."
-                },
-                {
-                    "p": "3.After the deployment succeed, select Items to view the deployed model on the right; click offline in the form on the right side of the page, and click invoking after it becomes online. Then the model can be executed online."
+                    "p": [
+                        "1. Directly select the four folders and the license file in step one; click compress to generate a compressed package (i.e. the deployment package). Note: The format of the compressed package must be zip, and there should not be any subdirectories in the compressed package.",
+                        "2. Click the Management page in the model service container to open the management page; select deployment under Local Services in the left navigation bar; select the compressed package generated and submit it.",
+                        "3. After the deployment succeed, select Items to view the deployed model on the right; click offline in the form on the right side of the page, and click invoking after it becomes online. Then the model can be executed online."
+                    ]
                 }
             ]
         },
@@ -164,7 +152,9 @@
             "title": "",
             "content": [
                 {
-                    "p": "The above model program, encapsulation program, and input files can all be downloaded <a targe=\"_blank\" href=\"./resources/createWordCloud.zip\">here.</a> You can find them in the model and testify floder."
+                    "p": [
+                        "The above model program, encapsulation program, and input files can all be downloaded <a targe=\"_blank\" href=\"./resources/createWordCloud.zip\">here.</a> You can find them in the model and testify floder."
+                    ]
                 }
             ]
         }

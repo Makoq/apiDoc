@@ -1,19 +1,19 @@
 [
     {
         "Name" : "getName()",
-        "Description" : "Get model name (computable model name)",
+        "Description" : "Get the name of a computable model from a mdl file",
         "Params" : [],
         "Return" : "model name",
         "ReturnType" : "string"
     },
     {
         "Name" : "setName(string name)",
-        "Description" : "Get model name (computable model name)",
+        "Description" : "Set the model name",
         "Params" : [
             {
                 "Name" : "name",
                 "Type" : "string",
-                "Description" : "the name of model"
+                "Description" : "model name"
             }
         ],
         "Return" : "no return",
@@ -21,20 +21,20 @@
     },
     {
         "Name" : "getUID()",
-        "Description" : "Get model UID (computable model UID)",
+        "Description" : "Get the model UID (computable model UID)",
         "Params" : [],
-        "Return" : "The UID of computable model",
+        "Return" : "the UID of a computable model",
         "ReturnType" : "string",
         "Note" : "The UID is a unique id for model package, and it is a Globally Unique Identifier (GUID)"
     },
     {
         "Name" : "setUID(string UID)",
-        "Description" : "Get model UID (computable model name)",
+        "Description" : "Set the model UID (computable model name)",
         "Params" : [
             {
-                "Name" : "name",
+                "Name" : "UID",
                 "Type" : "string",
-                "Description" : "the name of model"
+                "Description" : "the UID you intend to assign to a model"
             }
         ],
         "Return" : "no return",
@@ -54,7 +54,7 @@
             {
                 "Name" : "pType",
                 "Type" : "String",
-                "Description" : "the model's type"
+                "Description" : "model type"
             }
         ],
         "Return" : "no return",
@@ -70,7 +70,7 @@
                 "Description" : "the source file name with path"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
     {
@@ -83,7 +83,7 @@
                 "Description" : "the destination file name with path"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
     {
@@ -96,12 +96,12 @@
                 "Description" : "the string read from mdl file"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
     {
         "Name" : "FormatToXmlStream(ref string xmlStr)",
-        "Description" : "Format the MDL class to string",
+        "Description" : "Convert the MDL class to string",
         "Params" : [
             {
                 "Name" : "xmlStr",
@@ -109,7 +109,7 @@
                 "Description" : "the string convert from the MDL class"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
     {
@@ -157,28 +157,28 @@
                 "Description" : ""
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
     {
         "Name" : "getModelAttribute()",
         "Description" : "Get the attribute of model",
         "Params" : [],
-        "Return" : "ModelAttribute",
+        "Return" : "model attribute",
         "ReturnType" : "IModelAttribute"
     },
     {
         "Name" : "getModelBehavior()",
         "Description" : "Get the behavior of model",
         "Params" : [],
-        "Return" : "ModelBehavior",
+        "Return" : "model behavior",
         "ReturnType" : "IModelBehavior"
     },
     {
         "Name" : "getModelRuntime()",
         "Description" : "Get the runtime of model",
         "Params" : [],
-        "Return" : "ModelRuntime",
+        "Return" : "model runtime",
         "ReturnType" : "IModelRuntime"
     }
 ]

@@ -9,27 +9,27 @@
                 "Description" : "the Attribute in MDL"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
         "Name" : "formatToXml(XmlElement pModelClassElement)",
-        "Description" : "Format Attribute to XmlElement",
+        "Description" : "Convert attributes to XmlElement",
         "Params" : [
             {
                 "Name" : "pModelClassElement",
                 "Type" : "XmlElement",
-                "Description" : "the Attribute in MDL"
+                "Description" : "the attributes in MDL"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
         "Name" : "getCategoryCount()",
-        "Description" : "Get the category count",
+        "Description" : "Get a category count",
         "Params" : [],
-        "Return" : "count of categorys",
+        "Return" : "count of categories",
         "ReturnType" : "int"
     },
 	{
@@ -47,7 +47,7 @@
                 "Description" : "the return of this ModelCategory"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -65,7 +65,7 @@
                 "Description" : "the return of this LocalAttribute"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -83,7 +83,7 @@
                 "Description" : "the return of LocalAttribute"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -103,7 +103,7 @@
                 "Description" : "the object of ModelCategory"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -116,7 +116,7 @@
                 "Description" : "the object of LocalAttribute"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -129,7 +129,7 @@
                 "Description" : "the index of category"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -142,7 +142,7 @@
                 "Description" : "the category to remove"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -155,7 +155,7 @@
                 "Description" : "the index of local attribute"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -168,7 +168,7 @@
                 "Description" : "the local attribute to remove"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -186,7 +186,7 @@
                 "Description" : "the category to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -204,7 +204,7 @@
                 "Description" : "the local attribute to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -222,7 +222,7 @@
                 "Description" : "the local attribute to update"
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     },
 	{
@@ -245,7 +245,7 @@
                 "Description" : ""
             }
         ],
-        "Return" : "True or False",
+        "Return" : "true or false",
         "ReturnType" : "bool"
     }
 ]

@@ -148,6 +148,9 @@
     font-style: italic;
     color:#aaa;
 }
+.markdown > p{
+    margin-top:16px;
+}
 
 .pictureBox{
     padding:10px 5px;
